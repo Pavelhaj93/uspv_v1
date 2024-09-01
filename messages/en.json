@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "USPV - Photovoltaic power plants",
+    "description": "USPV - Photovoltaic power plants"
+  },
+  "navbar": {
+    "home": "Home",
+    "aboutUs": "About us",
+    "references": "Reference",
+    "contact": "Contact",
+    "switchToEnglish": "en",
+    "switchToCzech": "cs"
+  },
+  "aboutUsSection": {
+    "title": "About us!"
+  }
+}

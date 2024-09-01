@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "title": "USPV - Fotovoltaické elektrárny",
+    "description": "USPV - Fotovoltaické elektrárny"
+  },
+  "navbar": {
+    "home": "domu",
+    "aboutUs": "O nás",
+    "references": "Reference",
+    "contact": "Kontakt",
+    "switchToEnglish": "en",
+    "switchToCzech": "cz"
+  },
+  "aboutUsSection": {
+    "title": "O nás!"
+  }
+}
