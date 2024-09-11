@@ -6,7 +6,6 @@ import BurgerMenu from "../BurgerMenu";
 import { Fade as Hamburger } from "hamburger-react";
 import LanguageSwitcher from "../LangSwitcher";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import LogoSVG from "./LogoSVG";
 
 const Navbar = () => {
@@ -54,35 +53,32 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-10">
+    <header className="fixed top-0 left-0 h-20 w-full z-10">
       {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
-        className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white ${
-          scrolled ? "h-16" : "h-0"
-        } ${isOpen ? " h-screen" : ""} `}
+        className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white 
+        h-20 ${isOpen ? " h-screen" : ""} `}
       />
       <div
-        className="relative mx-auto flex h-16 max-w-7xl items-center justify-between md:px-4"
+        className="relative mx-auto flex h-20 items-center justify-between px-8"
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
           <div className="group">
-            <LogoSVG color={scrolled ? "#000000" : "#FFFFFF"} />
+            <LogoSVG color={scrolled ? "#FFFFFFF" : "#000000"} />
           </div>
           <span className="sr-only">
             USPV company - solar power and energy independence
           </span>
         </Link>
         <div className="hidden md:flex items-center gap-4">
-          <nav className="text-sm font-medium text-white">
+          <nav className="text-sm font-medium">
             <ul className="flex items-baseline gap-6">
               {links.map((link) => (
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl tracking-tighter ${
-                      scrolled ? "text-black" : "text-white"
-                    }`}
+                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl tracking-tighter text-black`}
                     prefetch={false}
                   >
                     {link.name}

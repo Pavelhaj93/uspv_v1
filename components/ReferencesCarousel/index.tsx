@@ -23,28 +23,47 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 const projects = [
-  { country: "Czech Republic", years: "2006-10", developed: 7, constructed: 0 },
+  {
+    country: "Czech Republic",
+    years: "2006-10",
+    developed: 7,
+    image: "/images/cards/card_1.jpg",
+  },
   {
     country: "United Kingdom",
     years: "2014-16",
     developed: 90,
+    image: "/images/cards/card_2.jpg",
   },
-  { country: "Romania", years: "2013-17", developed: 30, constructed: 6 },
-  { country: "Ukraine", years: "2012-22", developed: 200, constructed: 80 },
+  {
+    country: "Romania",
+    years: "2013-17",
+    developed: 30,
+    image: "/images/cards/card_3.jpg",
+  },
+  {
+    country: "Ukraine",
+    years: "2012-22",
+    developed: 200,
+    image: "/images/cards/card_4.jpg",
+  },
   {
     country: "Turkey",
     years: "",
     developed: 20,
+    image: "/images/cards/card_5.jpg",
   },
   {
     country: "Russia",
     years: "2016",
     developed: 435,
+    image: "/images/cards/card_6.jpg",
   },
   {
     country: "Kazakhstan",
     years: "",
     developed: 100,
+    image: "/images/cards/card_8.jpg",
   },
 ];
 
@@ -69,7 +88,7 @@ export default function PVProjectsCarousel() {
   const scrollTo = (index: number) => api && api.scrollTo(index);
 
   return (
-    <section className="bg-gradient-to-br h-full from-purple-300 to-yellow-300 py-16">
+    <section className="bg-gradient-to-br bg-white py-6">
       <div className="mx-auto px-4 w-screen">
         <h2 className="text-6xl font-bold font-montserrat text-center mb-8">
           {t("title")}
@@ -96,9 +115,12 @@ export default function PVProjectsCarousel() {
             {projects.map((project, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis-1/2 lg:basis-1/3 pl-4 h-[600px] "
+                className="md:basis-1/2 lg:basis-1/3 pl-4 h-[600px]"
               >
-                <Card className="h-full flex flex-col justify-between bg-[url(/images/FVE_foto.webp)] bg-cover bg-center">
+                <Card
+                  className={`h-full flex flex-col justify-between  bg-cover bg-center`}
+                  style={{ backgroundImage: `url(${project.image})` }}
+                >
                   <CardHeader>
                     <CardTitle className="font-montserrat text-3xl">
                       {project.country}

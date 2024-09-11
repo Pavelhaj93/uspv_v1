@@ -32,13 +32,35 @@
         "suffix": "+€"
       },
       "card4": {
-        "title": "developed projects",
+        "title": "installed capacity",
         "suffix": "+MWp"
+      },
+      "card5": {
+        "title": "turnover",
+        "suffix": "+mil. €"
+      },
+      "card6": {
+        "title": "CO2 emissions avoided",
+        "suffix": "+mil. tons"
       }
     }
   },
   "referencesSection": {
     "title": "PV Development and construction",
-    "subtitle": "Our group has developed/supported PV development and constructed PV of total size over 900MWp"
+    "subtitle": "Our group has developed/supported PV development and constructed PV of total size over 900MWp",
+    "cards": {
+      "card1": {
+        "title": "Developed projects",
+        "suffix": "+"
+      },
+      "card2": {
+        "title": "Installed capacity",
+        "suffix": "+MWp"
+      },
+      "card3": {
+        "title": "CO2 emissions avoided",
+        "suffix": "+mil tons"
+      }
+    }
   }
 }

@@ -29,16 +29,38 @@
       },
       "card3": {
         "title": "milionů € v portfoliu",
-        "suffix": "+€"
+        "suffix": "+mil. €"
       },
       "card4": {
-        "title": "vyvinutých projektů",
+        "title": "instalovaného výkonu",
         "suffix": "+MWp"
+      },
+      "card5": {
+        "title": "obrat",
+        "suffix": "+mil. €"
+      },
+      "card6": {
+        "title": "CO2 emisí zachráněno",
+        "suffix": "+mil. tun"
       }
     }
   },
   "referencesSection": {
     "title": "Development fotovoltaiických projektů",
-    "subtitle": "Naše skupina vyvinula/podporovala vývoj FV a postavila FV o celkové velikosti přes 900 MWp"
+    "subtitle": "Naše skupina vyvinula/podporovala vývoj FV a postavila FV o celkové velikosti přes 900 MWp",
+    "cards": {
+      "card1": {
+        "title": "Vyvinuté projekty",
+        "suffix": "+"
+      },
+      "card2": {
+        "title": "Instalovaný výkon",
+        "suffix": "+MWp"
+      },
+      "card3": {
+        "title": "Obrat",
+        "suffix": "+mil. €"
+      }
+    }
   }
 }
