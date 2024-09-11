@@ -11,7 +11,34 @@
     "switchToEnglish": "en",
     "switchToCzech": "cs"
   },
+  "hero": {
+    "title": "USPV",
+    "subtitle": "Photovoltaic",
+    "group": "group"
+  },
   "aboutUsSection": {
-    "title": "About us!"
+    "title": "In a few figures...",
+    "cards": {
+      "card1": {
+        "title": "in business",
+        "suffix": " Years"
+      },
+      "card2": {
+        "title": "employees",
+        "suffix": "+"
+      },
+      "card3": {
+        "title": "mil. € portfolio",
+        "suffix": "+€"
+      },
+      "card4": {
+        "title": "developed projects",
+        "suffix": "+MWp"
+      }
+    }
+  },
+  "referencesSection": {
+    "title": "PV Development and construction",
+    "subtitle": "Our group has developed/supported PV development and constructed PV of total size over 900MWp"
   }
 }

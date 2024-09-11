@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const images = [
-  "/images/house-1.webp",
-  "/images/house-2.jpg",
-  "/images/cartoon-1.jpg",
+  "/images/FVE_foto.webp",
+  "/images/FVE_foto.webp",
+  "/images/FVE_foto.webp",
 ];
 
 const ImageGallery = () => {
@@ -15,13 +15,13 @@ const ImageGallery = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 15000); // Change image every 10 seconds
+    }, 15000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative h-screen w-screen overflow-hidden">
+    <section>
       {images.map((image, index) => (
         <div
           key={index}
@@ -34,19 +34,10 @@ const ImageGallery = () => {
             alt={`Gallery image ${index + 1}`}
             layout="fill"
             priority={index === 0}
-            style={{
-              objectFit: "cover",
-            }}
+            style={{ objectFit: "cover" }}
           />
         </div>
       ))}
-
-      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-        <h1 className="text-4xl font-bold text-white sm:text-6xl md:text-7xl lg:text-9xl font-lobster">
-          USPV
-        </h1>
-      </div>
-
       <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
         {images.map((_, index) => (
           <button

@@ -4,6 +4,7 @@ import ReferencesSection from "./_components/ReferncesSection";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
+import ContactSection from "./_components/ContactSection";
 
 export async function generateMetadata({
   params: { locale },
@@ -24,10 +25,11 @@ export default function Home({
   unstable_setRequestLocale(locale);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between overflow-x-hidden">
+    <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden">
       <HeroSection />
       <AboutUsSection />
       <ReferencesSection />
+      <ContactSection />
     </main>
   );
 }

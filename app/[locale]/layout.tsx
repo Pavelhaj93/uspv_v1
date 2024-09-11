@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Lobster } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n";
+import localFont from "next/font/local";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-montserrat",
+  weight: ["300", "500"],
 });
-const lobster = Lobster({
-  weight: ["400"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-lobster",
+
+const myFont = localFont({
+  src: "../../public/fonts/RoxboroughCF-Regular.otf",
+  variable: "--font-roxborough",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${lobster.variable}`}>
+      <body className={`${montserrat.variable} ${myFont.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

@@ -11,7 +11,34 @@
     "switchToEnglish": "en",
     "switchToCzech": "cz"
   },
+  "hero": {
+    "title": "USPV",
+    "subtitle": "Fotovoltaická",
+    "group": "skupina"
+  },
   "aboutUsSection": {
-    "title": "O nás!"
+    "title": "V několika číslech...",
+    "cards": {
+      "card1": {
+        "title": "na trhu",
+        "suffix": " let"
+      },
+      "card2": {
+        "title": "zaměstnanců",
+        "suffix": "+"
+      },
+      "card3": {
+        "title": "milionů € v portfoliu",
+        "suffix": "+€"
+      },
+      "card4": {
+        "title": "vyvinutých projektů",
+        "suffix": "+MWp"
+      }
+    }
+  },
+  "referencesSection": {
+    "title": "Development fotovoltaiických projektů",
+    "subtitle": "Naše skupina vyvinula/podporovala vývoj FV a postavila FV o celkové velikosti přes 900 MWp"
   }
 }

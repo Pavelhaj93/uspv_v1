@@ -1,15 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
-import mainLogo from "../../public/images/logo.svg";
-import Button from "../Button";
-import { motion } from "framer-motion";
 import BurgerMenu from "../BurgerMenu";
 import { Fade as Hamburger } from "hamburger-react";
 import LanguageSwitcher from "../LangSwitcher";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import LogoSVG from "./LogoSVG";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -59,25 +57,18 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 w-full z-10">
       {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
-        className={`absolute top-0 left-0 w-full transition-all duration-300 bg-black ${
-          scrolled || isOpen ? "md:h-16 h-screen" : "h-0"
-        }`}
+        className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white ${
+          scrolled ? "h-16" : "h-0"
+        } ${isOpen ? " h-screen" : ""} `}
       />
       <div
         className="relative mx-auto flex h-16 max-w-7xl items-center justify-between md:px-4"
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
-          {/* <div className="h-20 w-36 group">
-            <Image
-              src={mainLogo}
-              className="h-full w-full transition duration-300 ease-in-out fill-current text-white group-hover:text-gray-500"
-              alt="USPV company logo - solar power and energy independence"
-            />
-          </div> */}
-          <span className="text-4xl font-bold text-white font-lobster">
-            USPV
-          </span>
+          <div className="group">
+            <LogoSVG color={scrolled ? "#000000" : "#FFFFFF"} />
+          </div>
           <span className="sr-only">
             USPV company - solar power and energy independence
           </span>
@@ -89,7 +80,9 @@ const Navbar = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className="uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl tracking-tighter"
+                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl tracking-tighter ${
+                      scrolled ? "text-black" : "text-white"
+                    }`}
                     prefetch={false}
                   >
                     {link.name}
