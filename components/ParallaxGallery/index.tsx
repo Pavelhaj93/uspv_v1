@@ -24,18 +24,17 @@ function GalleryItem({
   const itemProgress = Math.max(0, Math.min(1, scrollProgress - index));
   console.log("itemProgress", itemProgress);
   const translateY = (1 - itemProgress) * 100;
-  //   const opacity = Math.max(0, Math.min(1, 2 - (scrollProgress - index)));
-  const lastImageVisible = scrollProgress > galleryItems.length - 1;
-  const lastImageIndex = galleryItems.length - 1;
 
-  const lastImageFinished = lastImageVisible && itemProgress === 1;
+  console.log("scrollProgress", scrollProgress);
+
+  const lastImageFinished = scrollProgress > 4;
   console.log("lastImageFinished", lastImageFinished);
 
   return (
     <div
       className={`w-full h-screen ${
         lastImageFinished ? "relative" : "fixed"
-      } top-0 left-0`}
+      }  top-0 left-0`}
       style={{
         zIndex: index + 1,
       }}
