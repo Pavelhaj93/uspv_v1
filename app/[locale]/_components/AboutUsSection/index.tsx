@@ -8,6 +8,7 @@ import { MdAttachMoney } from "react-icons/md";
 import { CiClock1 } from "react-icons/ci";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function AboutUsSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -70,47 +71,53 @@ export default function AboutUsSection() {
   ];
 
   return (
-    <section id="aboutUsSection" className="h-[60vh] w-full flex gap-5 p-10">
+    <section
+      id="aboutUsSection"
+      className="h-[80vh] w-full flex flex-col gap-5 p-5"
+    >
+      <SectionTitle title="NUMBERS" subtitle="Success in Numbers" />
       {/* Left half with background image */}
-      <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl ml-20">
-        <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
-          <Image
-            src="/images/worldMap_v2.png"
-            alt="World Map"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-          />
+      <div className="w-full flex gap-5 p-10 h-[60vh]">
+        <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl ml-20">
+          <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
+            <Image
+              src="/images/worldMap_v2.png"
+              alt="World Map"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
         </div>
-      </div>
-      <div className="w-1/2">
-        <div className="grid grid-cols-2 gap-5 h-full">
-          {infoCards.map((card, index) => (
-            <motion.div
-              key={card.title}
-              variants={cardVariants}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col justify-center pl-32"
-            >
-              <div className="border-l-4 border-black pl-8 flex flex-col gap-4">
-                <div className="text-xl md:text-4xl font-bold text-gray-900">
-                  <CountUp
-                    end={card.value}
-                    duration={card.duration}
-                    separator=","
-                    suffix={card.suffix}
-                  />
+        <div className="w-1/2">
+          <div className="grid grid-cols-2 gap-x-1 h-full pl-28">
+            {infoCards.map((card, index) => (
+              <motion.div
+                key={card.title}
+                variants={cardVariants}
+                initial="hidden"
+                animate={isVisible ? "visible" : "hidden"}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col justify-center"
+              >
+                <div className="border-l-2 border-black pl-8 flex flex-col gap-2">
+                  <div className="text-xl md:text-4xl font-bold text-gray-900">
+                    <CountUp
+                      end={card.value}
+                      duration={card.duration}
+                      separator=","
+                      suffix={card.suffix}
+                    />
+                  </div>
+                  <div className="flex items-center mb-4">
+                    <h2 className="text-lg font-light text-gray-700">
+                      {card.title}
+                    </h2>
+                  </div>
                 </div>
-                <div className="flex items-center mb-4">
-                  <h2 className="text-lg font-semibold text-gray-700">
-                    {card.title}
-                  </h2>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

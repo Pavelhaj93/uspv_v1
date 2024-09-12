@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import SectionTitle from "../SectionTitle";
 
 const projects = [
   {
@@ -90,12 +91,10 @@ export default function PVProjectsCarousel() {
   return (
     <section className="bg-gradient-to-br bg-white py-6">
       <div className="mx-auto px-4 w-screen">
-        <h2 className="text-6xl font-bold font-montserrat text-center mb-8">
-          {t("title")}
-        </h2>
-        <p className="text-2xl text-center font-montserrat mb-12">
-          {t("subtitle")}
-        </p>
+        <SectionTitle
+          title="OUR REFERENCES"
+          subtitle="Reliable Power Sources"
+        />
         <Carousel
           setApi={setApi}
           opts={{
