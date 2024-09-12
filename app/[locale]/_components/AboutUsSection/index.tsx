@@ -83,7 +83,6 @@ export default function AboutUsSection() {
           />
         </div>
       </div>
-      {/* Right half with green block and cards */}
       <div className="w-1/2">
         <div className="grid grid-cols-2 gap-5 h-full">
           {infoCards.map((card, index) => (
