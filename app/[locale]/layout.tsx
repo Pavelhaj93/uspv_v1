@@ -11,7 +11,6 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-montserrat",
-  weight: ["300", "500"],
 });
 
 const myFont = localFont({

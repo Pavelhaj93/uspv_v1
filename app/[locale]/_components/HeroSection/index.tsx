@@ -4,7 +4,7 @@ import VideoGallery from "@/components/VideoGallery";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-screen overflow-hidden p-10">
+    <section className="relative h-screen w-screen overflow-hidden p-5">
       <VideoGallery />
       <AnimatedText />
     </section>
