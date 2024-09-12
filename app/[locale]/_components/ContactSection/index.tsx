@@ -14,6 +14,16 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer Section */}
+      <section
+        id="footerSection"
+        className="absolute bottom-0 w-screen bg-white h-20 flex items-center justify-center"
+      >
+        <div className="font-montserrat text-center">
+          © 2024 USPV s.r.o. - All rights reserved.
+        </div>
+      </section>
     </section>
   );
 };

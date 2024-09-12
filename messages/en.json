@@ -21,27 +21,27 @@
     "cards": {
       "card1": {
         "title": "in business",
-        "suffix": " Years"
+        "suffix": " years"
       },
       "card2": {
         "title": "employees",
         "suffix": "+"
       },
       "card3": {
-        "title": "mil. € portfolio",
-        "suffix": "+€"
+        "title": "portfolio",
+        "suffix": "+ mil. €"
       },
       "card4": {
         "title": "installed capacity",
-        "suffix": "+MWp"
+        "suffix": "+ MWp"
       },
       "card5": {
         "title": "turnover",
-        "suffix": "+mil. €"
+        "suffix": "+ mil. €"
       },
       "card6": {
         "title": "CO2 emissions avoided",
-        "suffix": "+mil. tons"
+        "suffix": "+ tons"
       }
     }
   },

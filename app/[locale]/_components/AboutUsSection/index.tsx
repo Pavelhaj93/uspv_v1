@@ -48,7 +48,7 @@ export default function AboutUsSection() {
     },
     {
       title: t("cards.card4.title"),
-      value: 900,
+      value: 1232,
       icon: <MdAttachMoney size={32} />,
       suffix: t("cards.card4.suffix"),
       duration: 8,
@@ -72,8 +72,8 @@ export default function AboutUsSection() {
   return (
     <section id="aboutUsSection" className="h-[60vh] w-full flex gap-5 p-10">
       {/* Left half with background image */}
-      <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center contrast-50 rounded-3xl">
-        <div className="lg:w-1/2 relative h-[400px] lg:h-auto">
+      <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl ml-20">
+        <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
           <Image
             src="/images/worldMap_v2.png"
             alt="World Map"
@@ -84,7 +84,7 @@ export default function AboutUsSection() {
         </div>
       </div>
       {/* Right half with green block and cards */}
-      <div className="w-1/2 rounded-3xl">
+      <div className="w-1/2">
         <div className="grid grid-cols-2 gap-5 h-full">
           {infoCards.map((card, index) => (
             <motion.div
@@ -93,10 +93,10 @@ export default function AboutUsSection() {
               initial="hidden"
               animate={isVisible ? "visible" : "hidden"}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="p-6 flex flex-col justify-center pl-20"
+              className="flex flex-col justify-center pl-32"
             >
-              <div className="border-l-4 border-black pl-8 flex flex-col gap-3">
-                <div className="text-3xl md:text-6xl font-bold text-gray-900">
+              <div className="border-l-4 border-black pl-8 flex flex-col gap-4">
+                <div className="text-xl md:text-4xl font-bold text-gray-900">
                   <CountUp
                     end={card.value}
                     duration={card.duration}
@@ -105,7 +105,7 @@ export default function AboutUsSection() {
                   />
                 </div>
                 <div className="flex items-center mb-4">
-                  <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+                  <h2 className="text-lg font-semibold text-gray-700">
                     {card.title}
                   </h2>
                 </div>

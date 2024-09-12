@@ -11,7 +11,7 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4">
       {/* Link component automatically handles locale-aware routing */}
       <button className="text-4xl" onClick={() => toggleLocale("en")}>
         🇬🇧

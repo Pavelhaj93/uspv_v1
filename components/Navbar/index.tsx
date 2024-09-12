@@ -53,14 +53,14 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 h-20 w-full z-10">
+    <header className="fixed top-0 left-0 h-16 w-full z-10">
       {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
         className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white 
-        h-20 ${isOpen ? " h-screen" : ""} `}
+        h-16 ${isOpen ? " h-screen" : ""} `}
       />
       <div
-        className="relative mx-auto flex h-20 items-center justify-between px-8"
+        className="relative mx-auto flex h-16 items-center justify-between px-8"
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
@@ -71,14 +71,14 @@ const Navbar = () => {
             USPV company - solar power and energy independence
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-4">
-          <nav className="text-sm font-medium">
-            <ul className="flex items-baseline gap-6">
+        <div className="hidden md:flex items-center gap-10">
+          <nav className="font-medium">
+            <ul className="flex items-baseline gap-10">
               {links.map((link) => (
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-xl tracking-tighter text-black`}
+                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-md tracking-tighter text-black`}
                     prefetch={false}
                   >
                     {link.name}
@@ -105,44 +105,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-function MenuIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="4" y1="12" x2="20" y2="12" />
-      <line x1="4" y1="18" x2="20" y2="18" />
-    </svg>
-  );
-}
-
-function XIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
-    </svg>
-  );
-}
