@@ -77,7 +77,7 @@ export default function AboutUsSection() {
     >
       <SectionTitle title="NUMBERS" subtitle="Success in Numbers" />
       {/* Left half with background image */}
-      <div className="w-full flex gap-5 p-10 h-[60vh]">
+      <div className="w-full flex gap-5 h-[65vh]">
         <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl ml-20">
           <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
             <Image

@@ -1,12 +1,16 @@
 "use client";
 
+import ParallaxGallery from "@/components/ParallaxGallery";
 import ReferencesCarousel from "@/components/ReferencesCarousel";
+import SectionTitle from "@/components/SectionTitle";
 
 const CompanySection = () => {
   return (
-    <section id="referencesSection" className="w-screen h-full relative">
+    <section id="referencesSection" className="w-screen h-full">
       {/* Your content goes here */}
-      <ReferencesCarousel />
+      <SectionTitle title="OUR REFERENCES" subtitle="Reliable Power Sources" />
+      {/* <ReferencesCarousel /> */}
+      <ParallaxGallery />
     </section>
   );
 };
