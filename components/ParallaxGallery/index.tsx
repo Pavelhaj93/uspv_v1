@@ -28,12 +28,15 @@ function GalleryItem({
   console.log("scrollProgress", scrollProgress);
 
   const lastImageFinished = scrollProgress > 4;
+  const firstImageNotFinished = scrollProgress < 1;
   console.log("lastImageFinished", lastImageFinished);
+
+  console.log("test", firstImageNotFinished);
 
   return (
     <div
       className={`w-full h-screen ${
-        lastImageFinished ? "relative" : "fixed"
+        lastImageFinished || firstImageNotFinished ? "relative" : "fixed"
       }  top-0 left-0`}
       style={{
         zIndex: index + 1,
@@ -47,8 +50,11 @@ function GalleryItem({
           className="rounded-3xl"
           objectFit="cover"
           style={{
-            transform: `translateY(${translateY}%) `,
+            transform: !firstImageNotFinished
+              ? `translateY(${translateY}%) `
+              : "",
             transition: "transform 0.1s ease-out",
+            opacity: index === 1 && firstImageNotFinished ? 0 : 1,
           }}
         />
       </div>
@@ -70,9 +76,6 @@ export default function ParallaxGallery() {
         const scrollPosition = window.scrollY;
         const galleryStart = scrollPosition + top - windowHeight;
         const galleryEnd = galleryStart + height;
-
-        console.log("galleryStart", galleryStart);
-        console.log("galleryEnd", galleryEnd);
 
         const progress =
           (scrollPosition - galleryStart) / (galleryEnd - galleryStart);
