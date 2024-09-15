@@ -117,19 +117,19 @@ export default function PVProjectsCarousel() {
                 className="md:basis-1/2 lg:basis-1/3 pl-4 h-[600px]"
               >
                 <Card
-                  className={`h-full flex flex-col justify-between  bg-cover bg-center`}
+                  className={`h-full flex flex-col justify-between bg-cover bg-center`}
                   style={{ backgroundImage: `url(${project.image})` }}
                 >
                   <CardHeader>
-                    <CardTitle className="font-montserrat text-3xl">
+                    <CardTitle className="text-3xl">
                       {project.country}
                     </CardTitle>
-                    <CardDescription className="font-montserrat text-black text-lg">
+                    <CardDescription className="text-black text-lg">
                       {project.years}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-xl mb-1 text-white font-montserrat">
+                    <p className="text-xl mb-1 text-white">
                       Developed: {project.developed} MWp
                     </p>
                   </CardContent>
