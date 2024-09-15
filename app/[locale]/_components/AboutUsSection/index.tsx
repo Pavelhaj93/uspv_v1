@@ -1,122 +1,53 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import CountUp from "react-countup";
-import { FaEuroSign, FaPeopleGroup } from "react-icons/fa6";
-import { MdAttachMoney } from "react-icons/md";
-import { CiClock1 } from "react-icons/ci";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import SectionTitle from "@/components/SectionTitle";
+import Link from "next/link";
 
 export default function AboutUsSection() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const t = useTranslations("aboutUsSection");
-
-  const infoCards = [
-    {
-      title: t("cards.card1.title"),
-      value: Math.floor(new Date().getFullYear() - 2006),
-      icon: <CiClock1 size={32} />,
-      suffix: t("cards.card1.suffix"),
-      duration: 2.5,
-    },
-    {
-      title: t("cards.card2.title"),
-      value: 60,
-      icon: <FaPeopleGroup size={32} />,
-      suffix: t("cards.card2.suffix"),
-      duration: 3.5,
-    },
-    {
-      title: t("cards.card3.title"),
-      value: 85,
-      icon: <FaEuroSign size={32} />,
-      suffix: t("cards.card3.suffix"),
-      duration: 5,
-    },
-    {
-      title: t("cards.card4.title"),
-      value: 1232,
-      icon: <MdAttachMoney size={32} />,
-      suffix: t("cards.card4.suffix"),
-      duration: 8,
-    },
-    {
-      title: t("cards.card5.title"),
-      value: 35,
-      icon: <FaPeopleGroup size={32} />,
-      suffix: t("cards.card5.suffix"),
-      duration: 4,
-    },
-    {
-      title: t("cards.card6.title"),
-      value: 100,
-      icon: <FaEuroSign size={32} />,
-      suffix: t("cards.card6.suffix"),
-      duration: 6,
-    },
-  ];
-
   return (
     <section
       id="aboutUsSection"
-      className="h-[80vh] w-full flex flex-col gap-5 p-5"
+      className="h-[70vh] w-full flex flex-col gap-5 px-5 pb-5"
     >
-      <SectionTitle title="NUMBERS" subtitle="Success in Numbers" />
-      {/* Left half with background image */}
-      <div className="w-full flex gap-5 h-[65vh]">
-        <div className="w-1/2 bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl ml-20">
-          <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
-            <Image
-              src="/images/worldMap_v2.png"
-              alt="World Map"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
-        </div>
-        <div className="w-1/2">
-          <div className="grid grid-cols-2 gap-x-1 h-full pl-28">
-            {infoCards.map((card, index) => (
-              <motion.div
-                key={card.title}
-                variants={cardVariants}
-                initial="hidden"
-                animate={isVisible ? "visible" : "hidden"}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex flex-col justify-center"
+      <div className="flex h-full justify-between gap-5">
+        <div className="bg-[#ecc69b] rounded-3xl px-10 pt-16 w-3/5 flex flex-col justify-between pb-10">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-xl font-normal font-montserrat ml-1">
+              WE ARE PART OF
+            </h3>
+            <h3 className="text-6xl font-medium font-montserrat tracking-tighter">
+              Ekotechnik Czech s.r.o.
+            </h3>
+            <div className="my-4">
+              <Link
+                href="https://www.ekotechnik.cz"
+                className="bg-white-black px-6 py-3 rounded-xl text-lg font-semibold hover:bg-black bg-white hover:text-white transition-colors duration-300 ease-in-out"
               >
-                <div className="border-l-2 border-black pl-8 flex flex-col gap-2">
-                  <div className="text-xl md:text-4xl font-bold text-gray-900">
-                    <CountUp
-                      end={card.value}
-                      duration={card.duration}
-                      separator=","
-                      suffix={card.suffix}
-                    />
-                  </div>
-                  <div className="flex items-center mb-4">
-                    <h2 className="text-lg font-light text-gray-700">
-                      {card.title}
-                    </h2>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                Visit Ekotechnik
+              </Link>
+            </div>
+          </div>
+          <p className="mt-4 font-montserrat leading-6">
+            Our company is part of Ekotechnik Czech, operating since 1990. We’ve
+            worked on three continents, navigating various climate, technical,
+            and legislative needs. We specialize in photovoltaic systems and
+            local energy networks, with a focus on maximizing on-site energy
+            use. Every project we take on guarantees economic returns, and we
+            offer the flexibility to repurchase your share if plans change.
+          </p>
+        </div>
+        <div className="bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl w-3/5">
+          <div className="">
+            <div className="lg:w-1/2 relative h-[600px] lg:h-auto">
+              <Image
+                src="/images/worldMap_v2.png"
+                alt="World Map"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>

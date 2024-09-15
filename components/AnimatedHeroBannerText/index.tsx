@@ -12,12 +12,16 @@ const AnimatedText = () => {
   const t = useTranslations("hero");
 
   return (
-    <div className="absolute mx-auto max-w-7xl inset-0 flex flex-col items-start justify-center text-white bottom-40">
+    <div className="absolute mx-auto w-3/5 flex flex-col items-start justify-end text-black bg-white z-0 bottom-0 h-1/3 mb-20 left-20 rounded-3xl pb-7 pl-7 pr-4 opacity-70">
       {/* Container for "USPV" and the animated text */}
-      <div className="flex flex-col items-start gap-5">
-        <h1 className="text-9xl font-bold font-roxborough">{t("title")}</h1>
-        <div className="text-6xl flex items-start gap-10">
-          <div className="flex space-x-1">
+      <div className="flex flex-col items-start gap-2">
+        <h1 className="text-6xl font-medium font-montserrat tracking-tighter">
+          Go Green with the Force of Renewable Energy
+        </h1>
+        <div className="text-xl flex items-start gap-10">
+          Leading the Solar Energy Revolution. 100% Eco-Conscious, 100%
+          Innovative.
+          {/* <div className="flex space-x-1">
             {t("subtitle")
               .split("")
               .map((char, index) => (
@@ -51,7 +55,7 @@ const AnimatedText = () => {
                   {char}
                 </motion.span>
               ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

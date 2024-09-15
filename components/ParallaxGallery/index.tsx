@@ -54,7 +54,6 @@ function GalleryItem({
               ? `translateY(${translateY}%) `
               : "",
             transition: "transform 0.1s ease-out",
-            opacity: index === 1 && firstImageNotFinished ? 0 : 1,
           }}
         />
       </div>
