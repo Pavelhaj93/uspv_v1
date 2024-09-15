@@ -1,7 +1,11 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const galleryItems = [
   { id: 1, src: "/images/cards/card_1.jpg", alt: "Gallery Image 1" },
@@ -10,111 +14,48 @@ const galleryItems = [
   { id: 4, src: "/images/cards/card_4.jpg", alt: "Gallery Image 4" },
 ];
 
-function GalleryItem({
-  id,
-  src,
-  alt,
-  index,
-  scrollProgress,
-}: {
-  id: number;
-  src: string;
-  alt: string;
-  index: number;
-  scrollProgress: number;
-}) {
-  const itemProgress = Math.max(0, Math.min(1, scrollProgress - index));
-  console.log("itemProgress", itemProgress);
-  const translateY = (1 - itemProgress) * 100;
-
-  console.log("scrollProgress", scrollProgress);
-
-  const lastImageFinished = scrollProgress > 4;
-  const firstImageNotFinished = scrollProgress < 1;
-  console.log("lastImageFinished", lastImageFinished);
-
-  console.log("test", firstImageNotFinished);
-
-  return (
-    <div
-      className={`w-[calc(100%_-_40px)] h-screen ${
-        lastImageFinished || firstImageNotFinished ? "relative" : "fixed"
-      }       
-       top-5 left-5`}
-      style={{
-        zIndex: index + 1,
-      }}
-    >
-      <div className="w-full h-full overflow-hidden">
-        <Image
-          src={src}
-          alt={alt}
-          layout="fill"
-          className="rounded-3xl"
-          objectFit="cover"
-          style={{
-            transform: `translateY(${translateY}%) `,
-
-            transition: "transform 0.1s ease-out",
-          }}
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function ParallaxGallery() {
-  const [scrollProgress, setScrollProgress] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
-  console.log("scrollProgress", scrollProgress);
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const { top, height } = ref.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.scrollY;
-        const galleryStart = scrollPosition + top - windowHeight;
-        const galleryEnd = galleryStart + height;
+    const sections = gsap.utils.toArray(".gallery-section");
 
-        const progress =
-          (scrollPosition - galleryStart) / (galleryEnd - galleryStart);
-        setScrollProgress(
-          Math.max(
-            0,
-            Math.min(
-              galleryItems.length + 1,
-              progress * (galleryItems.length + 1)
-            )
-          )
-        );
+    sections.forEach((section: any, i) => {
+      // Only pin the sections except the last one
+      if (i !== sections.length - 1) {
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+          markers: false,
+          scrub: true,
+          end: "bottom top", // Pin the section until its bottom reaches the top of the viewport
+        });
       }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial call to set correct initial state
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
   return (
-    <div
-      ref={ref}
-      style={{ height: `${(galleryItems.length + 1) * 100}vh` }}
-      className="rounded-3xl"
-    >
+    <div style={{ height: `${galleryItems.length * 100}vh` }} ref={ref}>
       {galleryItems.map((item, index) => (
-        <GalleryItem
+        <section
           key={item.id}
-          id={item.id}
-          src={item.src}
-          alt={item.alt}
-          index={index}
-          scrollProgress={scrollProgress}
-        />
+          className="gallery-section h-screen w-screen grid place-items-center"
+        >
+          <div className="w-[calc(100%_-_40px)] h-[calc(100%_-_40px)] overflow-hidden relative">
+            <Image
+              src={item.src}
+              alt={item.alt}
+              layout="fill"
+              className="rounded-3xl object-cover h-[calc(100%_-_100px)] "
+            />
+          </div>
+        </section>
       ))}
     </div>
   );
