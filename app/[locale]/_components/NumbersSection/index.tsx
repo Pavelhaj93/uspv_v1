@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -6,6 +8,7 @@ import { FaEuroSign, FaPeopleGroup } from "react-icons/fa6";
 import { MdAttachMoney } from "react-icons/md";
 import { CiClock1 } from "react-icons/ci";
 import { useTranslations } from "next-intl";
+import SectionTitle from "@/components/SectionTitle";
 
 const NumbersSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -67,32 +70,37 @@ const NumbersSection = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 gap-x-1 h-full pl-28">
-      {infoCards.map((card, index) => (
-        <motion.div
-          key={card.title}
-          variants={cardVariants}
-          initial="hidden"
-          animate={isVisible ? "visible" : "hidden"}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="flex flex-col justify-center"
-        >
-          <div className="border-l-2 border-black pl-8 flex flex-col gap-2">
-            <div className="text-xl md:text-4xl font-bold text-gray-900">
-              <CountUp
-                end={card.value}
-                duration={card.duration}
-                separator=","
-                suffix={card.suffix}
-              />
+    <section className="w-screen p-5 mb-24">
+      <SectionTitle title="NUMBERS" subtitle="Our achievements" />
+      <div className="grid grid-cols-3 w-full h-full gap-14 pl-20">
+        {infoCards.map((card, index) => (
+          <motion.div
+            key={card.title}
+            variants={cardVariants}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="flex flex-col justify-center"
+          >
+            <div className="border-l-2 border-black pl-8 flex flex-col gap-6">
+              <div className="text-xl md:text-6xl font-medium">
+                <CountUp
+                  end={card.value}
+                  duration={card.duration}
+                  separator=","
+                  suffix={card.suffix}
+                />
+              </div>
+              <div className="flex items-center mb-4">
+                <h2 className="text-lg font-light text-gray-700">
+                  {card.title}
+                </h2>
+              </div>
             </div>
-            <div className="flex items-center mb-4">
-              <h2 className="text-lg font-light text-gray-700">{card.title}</h2>
-            </div>
-          </div>
-        </motion.div>
-      ))}
-    </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
 

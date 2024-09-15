@@ -15,7 +15,7 @@ const AnimatedText = () => {
     <div className="absolute mx-auto w-3/5 flex flex-col items-start justify-end text-black bg-white z-0 bottom-0 h-1/3 mb-20 left-20 rounded-3xl pb-7 pl-7 pr-4 opacity-70">
       {/* Container for "USPV" and the animated text */}
       <div className="flex flex-col items-start gap-2">
-        <h1 className="text-6xl font-medium font-montserrat tracking-tighter">
+        <h1 className="text-6xl font-medium tracking-tighter">
           Go Green with the Force of Renewable Energy
         </h1>
         <div className="text-xl flex items-start gap-10">

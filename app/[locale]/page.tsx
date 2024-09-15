@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import ContactSection from "./_components/ContactSection";
 import SeparatorSection from "./_components/SeparatorSection";
 import PartnersSection from "./_components/PartnersSection";
+import NumbersSection from "./_components/NumbersSection";
 
 export async function generateMetadata({
   params: { locale },
@@ -29,7 +30,7 @@ export default function Home({
   return (
     <main className="flex min-h-screen flex-col items-center justify-between overflow-hidden">
       <HeroSection />
-      {/* <SeparatorSection /> */}
+      <NumbersSection />
       <AboutUsSection />
       <ReferencesSection />
       <PartnersSection />
