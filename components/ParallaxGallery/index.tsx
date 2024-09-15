@@ -11,11 +11,13 @@ const galleryItems = [
 ];
 
 function GalleryItem({
+  id,
   src,
   alt,
   index,
   scrollProgress,
 }: {
+  id: number;
   src: string;
   alt: string;
   index: number;
@@ -35,9 +37,10 @@ function GalleryItem({
 
   return (
     <div
-      className={`w-full h-screen ${
+      className={`w-[calc(100%_-_40px)] h-screen ${
         lastImageFinished || firstImageNotFinished ? "relative" : "fixed"
-      }  top-0 left-0`}
+      }       
+       top-5 left-5`}
       style={{
         zIndex: index + 1,
       }}
@@ -50,9 +53,8 @@ function GalleryItem({
           className="rounded-3xl"
           objectFit="cover"
           style={{
-            transform: !firstImageNotFinished
-              ? `translateY(${translateY}%) `
-              : "",
+            transform: `translateY(${translateY}%) `,
+
             transition: "transform 0.1s ease-out",
           }}
         />
@@ -107,6 +109,7 @@ export default function ParallaxGallery() {
       {galleryItems.map((item, index) => (
         <GalleryItem
           key={item.id}
+          id={item.id}
           src={item.src}
           alt={item.alt}
           index={index}

@@ -41,7 +41,7 @@ export default async function LocaleLayout({
     <html lang="en">
       <body className={`${montserrat.variable} ${myFont.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </NextIntlClientProvider>
       </body>
