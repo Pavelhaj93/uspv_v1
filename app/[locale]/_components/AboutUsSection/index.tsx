@@ -7,9 +7,9 @@ export default function AboutUsSection() {
   return (
     <section
       id="aboutUsSection"
-      className="w-full h-full flex flex-col gap-5 px-5 pb-5"
+      className="w-full h-[70vh] flex flex-col gap-5 px-5 pb-5"
     >
-      <div className="flex flex-col lg:flex-row lg:justify-between gap-5">
+      <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
         <div className="bg-[#ecc69b] rounded-3xl px-5 py-8 lg:px-10 lg:py-16 w-full lg:w-3/5 flex flex-col justify-between">
           <div className="flex flex-col gap-4">
             <h3 className="text-lg lg:text-xl font-normal ml-1">
@@ -32,24 +32,14 @@ export default function AboutUsSection() {
             <div className="mt-4">
               <Link
                 href="https://www.ekotechnik.cz"
-                className="bg-white-black px-4 py-2 lg:px-6 lg:py-3 rounded-xl text-base lg:text-lg font-semibold hover:bg-black bg-white hover:text-white transition-colors duration-300 ease-in-out"
+                className="bg-white-black px-4 py-2 lg:px-6 lg:py-3 rounded-full text-base lg:text-lg font-semibold bg-black hover:bg-white text-white hover:text-black hover:outline hover:outline-black transition-colors duration-300 ease-in-out"
               >
                 Visit Ekotechnik
               </Link>
             </div>
           </div>
         </div>
-        <div className="bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl w-full lg:w-3/5">
-          <div className="relative h-48 lg:h-[600px]">
-            <Image
-              src="/images/worldMap_v2.png"
-              alt="World Map"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
-        </div>
+        <div className="bg-[url(/images/worldMap_v2.png)] bg-cover bg-center rounded-3xl w-full lg:w-3/5" />
       </div>
     </section>
   );
