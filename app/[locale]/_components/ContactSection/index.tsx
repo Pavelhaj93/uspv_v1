@@ -35,7 +35,6 @@ export default function ContactSection() {
         </div>
       </section>
 
-      {/* Footer Section */}
       <section
         id="footerSection"
         className="w-full bg-white h-12 flex items-center justify-center"
