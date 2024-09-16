@@ -95,7 +95,7 @@ export default function ParallaxGallery() {
   }, []);
 
   const renderProject = (project: any) => (
-    <div className="h-1/2 justify-between flex flex-col">
+    <div className="flex flex-col h-full justify-between">
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <h3 className="text-2xl font-bold">{project.country}</h3>
@@ -119,25 +119,29 @@ export default function ParallaxGallery() {
           acc.push(
             <section
               key={index}
-              className={`gallery-section h-screen w-screen grid place-items-center relative ${
+              className={`gallery-section h-screen w-screen relative ${
                 (activeIndex === 1 && index === 0) ||
+                (activeIndex === 2 && index === 0) ||
                 (activeIndex === 2 && index === 2)
                   ? "opacity-0"
                   : "opacity-100"
               }`}
             >
-              <div className="w-[calc(100vw-40px)] -left-5 h-full top-5 overflow-hidden relative">
-                <Image
-                  src={project.image}
-                  alt={`Project in ${project.country}`}
-                  layout="fill"
-                  className="rounded-3xl object-cover"
-                />
-                {/* card */}
+              <div className="w-full h-full flex flex-col md:flex-row">
+                {/* Image */}
+                <div className="relative h-1/3 top-2/3 md:top-5 -order-last  w-[calc(100%_-_40px)] md:h-[calc(100%_-_20px)]">
+                  <Image
+                    src={project.image}
+                    alt={`Project in ${project.country}`}
+                    layout="fill"
+                    className="rounded-3xl lg:rounded-t-3xl rounded-t-none object-cover"
+                  />
+                </div>
+                {/* Card */}
                 <div
-                  className={`absolute w-[30%] top-14 h-[calc(100%_-_92px)] rounded-3xl ${
-                    index % 4 === 0 ? "right-11" : "left-11"
-                  } bg-white/90 p-6`}
+                  className={`absolute w-[calc(100%_-_40px)] md:w-2/3 lg:w-1/3 top-0 rounded-b-none lg:rounded-b-3xl md:top-10 md:h-[calc(100%_-_60px)] h-2/3  bg-white lg:opacity-90 p-16 rounded-3xl shadow-lg ${
+                    index % 4 === 0 ? "md:right-20" : "md:left-11"
+                  }`}
                 >
                   <div className="flex flex-col h-full justify-between">
                     {renderProject(project)}
