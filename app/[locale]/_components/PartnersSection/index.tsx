@@ -30,7 +30,7 @@ const partners = [
 
 export default function PartnersCarousel() {
   return (
-    <section id="partnersSection" className="bg-white w-full">
+    <section id="partnersSection" className="bg-white w-full p-5">
       <SectionTitle title="PARTNERS" subtitle="Powering progress, Together" />
       <Carousel
         opts={{
@@ -44,13 +44,13 @@ export default function PartnersCarousel() {
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full px-10"
+        className="w-full"
       >
         <CarouselContent>
           {partners.map((partner, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 md:basis-1/3 lg:basis-1/6"
+              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6"
             >
               <div className="p-1">
                 <div className="max-w-[200px] max-h-[200px]">
@@ -68,8 +68,6 @@ export default function PartnersCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
     </section>
   );

@@ -62,9 +62,9 @@ export default function NumbersSection() {
   ];
 
   return (
-    <section className="w-screen p-5 mb-24">
+    <section className="w-screen p-5 xl:mb-24 mb-5 md:mb-10">
       <SectionTitle title="NUMBERS" subtitle="Our achievements" />
-      <div className="grid grid-cols-3 w-full h-full gap-14 pl-20">
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 w-full h-full gap-14 lg:pl-20 lg:pr-20">
         {infoCards.map((card, index) => (
           <motion.div
             key={card.title}
@@ -75,7 +75,7 @@ export default function NumbersSection() {
             className="flex flex-col justify-center"
           >
             <div className="border-l-2 border-black pl-8 flex flex-col gap-6">
-              <div className="text-xl md:text-6xl font-medium">
+              <div className="text-6xl font-medium">
                 {index === 3 ? (
                   <CountUp
                     start={400}
@@ -103,7 +103,7 @@ export default function NumbersSection() {
                 )}
               </div>
               <div className="flex items-center mb-4">
-                <h2 className="text-lg font-light text-gray-700">
+                <h2 className="xl:text-lg text-2xl font-light text-gray-700">
                   {card.title}
                 </h2>
               </div>

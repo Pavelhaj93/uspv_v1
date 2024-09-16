@@ -14,15 +14,15 @@ interface BurgerMenuProps {
 
 const BurgerMenu: FC<BurgerMenuProps> = ({ links, setIsOpen }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col fixed justify-evenly items-center overflow-hidden h-[calc(100vh_-_64px)]">
       <motion.nav
-        className="md:hidden bg-black h-screen w-screen text-white asbolute top-0 flex-col flex items-center"
+        className="md:hidden w-screen font-montserrat flex flex-col items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <ul className="relative top-10 flex flex-col items-center gap-6 text-6xl p-4">
+        <ul className="top-10 flex flex-col items-center gap-6 text-5xl p-4">
           {links.map((link) => (
             <li key={link.id}>
               <Link

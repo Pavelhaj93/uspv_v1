@@ -9,13 +9,38 @@ import { useTranslations } from "next-intl";
 import LogoSVG from "./LogoSVG";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const t = useTranslations("navbar");
 
-  // Update the state based on scroll position
-  const handleScroll = () => setScrolled(window.scrollY > 50);
+  const controlNavbar = useCallback(() => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setIsVisible(false);
+      } else {
+        // if scroll up show the navbar
+        setIsVisible(true);
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [controlNavbar]);
 
   // Close burger menu on resize if the screen is larger than a specific size
   const handleResize = useCallback(() => {
@@ -25,11 +50,9 @@ const Navbar = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize]);
@@ -53,19 +76,27 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 h-16 w-full z-10">
+    <header
+      className={`fixed top-0 left-0 w-full z-10 transition-transform duration-300 ${
+        isVisible ? "lg:translate-y-0" : "lg:-translate-y-full"
+      }`}
+    >
       {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
         className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white 
-        h-16 ${isOpen ? " h-screen" : ""} `}
+        h-16 ${isOpen ? "h-screen" : ""}`}
       />
       <div
-        className="relative mx-auto flex h-16 items-center justify-between px-8"
+        className="relative mx-auto flex h-16 items-center justify-between px-4 lg:px-8"
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
-          <div className="group">
-            <LogoSVG color={scrolled ? "#FFFFFFF" : "#000000"} />
+          <div
+            className="group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <LogoSVG color={isHovered ? "#ecc69b" : "#000000"} />
           </div>
           <span className="sr-only">
             USPV company - solar power and energy independence
@@ -78,7 +109,7 @@ const Navbar = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-gray-600 mt-4 transition duration-300 ease-in-out text-md tracking-tighter text-black`}
+                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out text-md tracking-tighter text-black`}
                     prefetch={false}
                   >
                     {link.name}
@@ -93,7 +124,7 @@ const Navbar = () => {
           <Hamburger
             toggled={isOpen}
             toggle={setIsOpen}
-            color="white"
+            color="black"
             size={24}
             label="Toggle menu"
           />

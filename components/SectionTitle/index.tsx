@@ -8,9 +8,11 @@ const SectionTitle = ({
   subtitle: string;
 }) => {
   return (
-    <div className="flex flex-col gap-3 my-10 pl-20 text-left">
+    <div className="flex flex-col gap-3 my-10 lg:pl-20 text-left">
       <h2 className="text-xl font-normal ml-1">{title}</h2>
-      <h3 className="text-6xl font-medium mb-8 tracking-tighter">{subtitle}</h3>
+      <h3 className="xl:text-6xl text-5xl font-medium mb-8 tracking-tighter">
+        {subtitle}
+      </h3>
     </div>
   );
 };
