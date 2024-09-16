@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,6 +68,7 @@ const projects = [
 
 export default function ParallaxGallery() {
   const ref = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {
     const sections = gsap.utils.toArray(".gallery-section");
@@ -82,6 +83,8 @@ export default function ParallaxGallery() {
           markers: false,
           scrub: true,
           end: "bottom top",
+          onEnter: () => setActiveIndex(i),
+          onLeaveBack: () => setActiveIndex(i - 1),
         });
       }
     });
@@ -101,13 +104,11 @@ export default function ParallaxGallery() {
         <p className="text-sm text-gray-600">{project.years}</p>
       </div>
 
-      {/* <Sun className="w-5 h-5 text-yellow-500" /> */}
+      <div className="flex flex-col gap-5">
+        <span className="text-7xl font-medium">{project.developed} MWp</span>
 
-      <span className="text-7xl font-medium text-center">
-        {project.developed} MWp
-      </span>
-
-      <p className="text-sm text-gray-600">{project.note}</p>
+        <p className="text-sm text-gray-600">{project.note}</p>
+      </div>
     </div>
   );
 
@@ -118,9 +119,14 @@ export default function ParallaxGallery() {
           acc.push(
             <section
               key={index}
-              className="gallery-section h-screen w-screen grid place-items-center relative"
+              className={`gallery-section h-screen w-screen grid place-items-center relative ${
+                (activeIndex === 1 && index === 0) ||
+                (activeIndex === 2 && index === 2)
+                  ? "opacity-0"
+                  : "opacity-100"
+              }`}
             >
-              <div className="w-[calc(100%_-_40px)] h-full top-5 overflow-hidden relative">
+              <div className="w-[calc(100vw-40px)] -left-5 h-full top-5 overflow-hidden relative">
                 <Image
                   src={project.image}
                   alt={`Project in ${project.country}`}
@@ -131,7 +137,7 @@ export default function ParallaxGallery() {
                 <div
                   className={`absolute w-[30%] top-14 h-[calc(100%_-_92px)] rounded-3xl ${
                     index % 4 === 0 ? "right-11" : "left-11"
-                  } bg-white/90 p-6 shadow-lg overflow-y-auto`}
+                  } bg-white/90 p-6`}
                 >
                   <div className="flex flex-col h-full justify-between">
                     {renderProject(project)}

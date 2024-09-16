@@ -23,7 +23,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      colors: {},
+      colors: {
+        primary: "#ecc69b",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
