@@ -56,17 +56,9 @@ const projects = [
     image: "/images/cards/card_7.jpg",
     note: "supplied design and engineering of the solar power plants",
   },
-  {
-    country: "Russia",
-    icon: "🇷🇺",
-    years: "2016",
-    developed: 435,
-    image: "/images/cards/card_2.jpg",
-    note: "secured financing of 600 mil",
-  },
 ];
 
-export default function ParallaxGallery() {
+export default function ReferenceParallaxGallery() {
   const ref = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
