@@ -1,7 +1,6 @@
 "use client";
 
-import ParallaxGallery from "@/components/ParallaxGallery";
-import ReferencesCarousel from "@/components/ReferencesCarousel";
+import ParallaxGallery from "@/components/ReferenceParallaxGallery";
 import SectionTitle from "@/components/SectionTitle";
 
 const CompanySection = () => {
