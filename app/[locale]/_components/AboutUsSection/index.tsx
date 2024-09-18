@@ -7,7 +7,7 @@ export default function AboutUsSection() {
   return (
     <section
       id="aboutUsSection"
-      className="w-full h-screen lg:h-[70vh] flex flex-col gap-5 px-5 pb-5"
+      className="w-full max-h-[600px] h-screen lg:h-[70vh] flex flex-col gap-5 px-5 pb-5"
     >
       <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
         <div className="bg-primary rounded-3xl px-5 py-8 lg:px-10 lg:py-10 w-full lg:w-2/5 flex flex-col justify-between">

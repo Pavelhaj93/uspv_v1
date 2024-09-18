@@ -21,7 +21,7 @@ const projects = [
     icon: "🇬🇧",
     years: "2014-16",
     developed: 90,
-    image: "/images/cards/card_2.jpg",
+    image: "",
     note: "development and construction",
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     icon: "🇺🇦",
     years: "2012-22",
     developed: 200 + 80,
-    image: "/images/cards/card_4.jpg",
+    image: "",
     note: "development and construction / EPC",
   },
   {
@@ -45,7 +45,7 @@ const projects = [
     icon: "🇹🇷",
     years: "",
     developed: 20,
-    image: "/images/cards/card_8.jpg",
+    image: "/images/cards/card_9.jpg",
     note: "development advisor",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     icon: "🇰🇿",
     years: "",
     developed: 100,
-    image: "/images/cards/card_7.jpg",
+    image: "",
     note: "supplied design and engineering of the solar power plants",
   },
 ];
@@ -88,7 +88,7 @@ export default function ReferenceParallaxGallery() {
 
   const renderProject = (project: any) => (
     <div className="flex flex-col h-full justify-between">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
         <div className="flex items-center gap-2">
           <h3 className="text-2xl font-bold">{project.country}</h3>
           <span className="text-3xl">{project.icon}</span>
@@ -97,7 +97,7 @@ export default function ReferenceParallaxGallery() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <span className="text-7xl font-medium">{project.developed} MWp</span>
+        <span className="text-6xl font-medium">{project.developed} MWp</span>
 
         <p className="text-sm text-gray-600">{project.note}</p>
       </div>
@@ -131,8 +131,8 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] md:w-2/3 lg:w-1/3 top-0 rounded-b-none lg:rounded-b-3xl md:top-10 md:h-[calc(100%_-_60px)] h-2/3  bg-white lg:opacity-90 p-16 rounded-3xl shadow-lg ${
-                    index % 4 === 0 ? "md:right-20" : "md:left-11"
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[600px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_180px)] h-2/3 bg-white lg:opacity-90 p-16 rounded-3xl shadow-lg ${
+                    index % 4 === 0 ? "md:right-32" : "md:left-32"
                   }`}
                 >
                   <div className="flex flex-col h-full justify-between">
