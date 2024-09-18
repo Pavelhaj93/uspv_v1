@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +11,18 @@ export default function AboutUsSection() {
       className="w-full max-h-[600px] h-screen lg:h-[70vh] flex flex-col gap-5 px-5 pb-5"
     >
       <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
-        <div className="bg-primary rounded-3xl px-5 py-8 lg:px-10 lg:py-10 w-full lg:w-2/5 flex flex-col justify-between">
+        {/* Left Card */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { x: 0 },
+            hidden: { x: "-100%" },
+          }}
+          transition={{ type: "spring", stiffness: 50, damping: 20 }}
+          className="bg-primary rounded-3xl px-5 py-8 lg:px-10 lg:py-10 w-full lg:w-2/5 flex flex-col justify-between"
+        >
           <div className="flex flex-col gap-4">
             <h3 className="text-lg lg:text-xl font-normal ml-1">
               WE ARE PART OF
@@ -38,8 +50,19 @@ export default function AboutUsSection() {
               </Link>
             </div>
           </div>
-        </div>
-        <div className="bg-[url(/images/worldMap_v3.png)] bg-cover bg-center rounded-3xl w-full lg:w-3/5 h-full" />
+        </motion.div>
+        {/* Right Card */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { x: 0 },
+            hidden: { x: "100%" },
+          }}
+          transition={{ type: "spring", stiffness: 80, damping: 20 }}
+          className="bg-[url(/images/worldMap_v3.png)] bg-cover bg-center rounded-3xl w-full lg:w-3/5 h-full"
+        />
       </div>
     </section>
   );
