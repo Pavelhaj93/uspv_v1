@@ -90,14 +90,15 @@ const Navbar = () => {
         className="relative mx-auto flex h-16 items-center justify-between px-4 lg:px-8"
         style={{ zIndex: 10 }}
       >
-        <Link href="#" className="flex items-center" prefetch={false}>
-          <div
-            className="group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <LogoSVG color={isHovered ? "#ecc69b" : "#000000"} />
-          </div>
+        <Link
+          href="#"
+          className="flex items-center"
+          prefetch={false}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <LogoSVG color={isHovered ? "#ecc69b" : "#000000"} />
+
           <span className="sr-only">
             USPV company - solar power and energy independence
           </span>
@@ -109,7 +110,7 @@ const Navbar = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out text-md tracking-tighter text-black`}
+                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out font-light text-black tracking-wider`}
                     prefetch={false}
                   >
                     {link.name}

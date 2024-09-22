@@ -26,6 +26,9 @@ const config: Config = {
       colors: {
         primary: "#ecc69b",
       },
+      flexBasis: {
+        "1/8": "12.5%",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

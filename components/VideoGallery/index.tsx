@@ -23,14 +23,16 @@ export default function VideoGallery() {
           video.play();
         } else {
           video.pause();
-          video.currentTime = 0;
+          setTimeout(() => {
+            video.currentTime = 0;
+          }, 1000);
         }
       }
     });
   }, [currentVideoIndex]);
 
   return (
-    <section className="relative w-full h-full">
+    <section className="relative w-full h-[calc(100vh_-_40px)]">
       {videos.map((video, index) => (
         <div
           key={index}
