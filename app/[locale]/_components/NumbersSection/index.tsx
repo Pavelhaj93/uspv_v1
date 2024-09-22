@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import CountUp from "react-countup";
 import { useTranslations } from "next-intl";
 import SectionTitle from "@/components/SectionTitle";
+import Image from "next/image";
 
 export default function AboutUsSectionWithNumbers() {
   const [isVisible, setIsVisible] = useState(false);
@@ -73,18 +74,17 @@ export default function AboutUsSectionWithNumbers() {
     >
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
-        {/* Left side with the World Map, taking 60-70% of the width */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            visible: { x: 0 },
-            hidden: { x: "-100%" },
-          }}
-          transition={{ type: "spring", stiffness: 50, damping: 20 }}
-          className="bg-[url(/images/worldMap_v3.png)] bg-cover bg-center rounded-3xl w-full lg:w-[55%]"
-        />
+        {/* Left side with the World Map */}
+        <div className="relative w-full lg:w-[55%] rounded-3xl overflow-hidden">
+          <Image
+            src="/images/worldMap_v3.png"
+            alt="World Map"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-3xl"
+            loading="lazy" // Lazy load the image
+          />
+        </div>
 
         {/* Right side with numbers, taking the remaining width */}
         <motion.div

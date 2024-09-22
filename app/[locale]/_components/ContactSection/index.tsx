@@ -1,12 +1,19 @@
 import React from "react";
+import Image from "next/image";
 
 export default function ContactSection() {
   return (
     <>
       <section id="contactSection" className="h-full w-full p-5 pb-0 relative">
         {/* Background Image */}
-        <div className="bg-[url(/images/MainPoint_1.jpg)] bg-center bg-cover relative w-full rounded-t-3xl md:rounded-3xl h-[20vh] md:h-[55vh] max-h-[420px]">
-          {/* Placeholder for the card in mobile */}
+        <div className="relative w-full rounded-t-3xl md:rounded-3xl h-[20vh] md:h-[55vh] max-h-[420px]">
+          <Image
+            src="/images/MainPoint_1.jpg"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-t-3xl md:rounded-3xl"
+          />
         </div>
 
         {/* Card */}

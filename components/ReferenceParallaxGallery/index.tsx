@@ -123,7 +123,9 @@ export default function ReferenceParallaxGallery() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <span className="text-6xl font-medium">{project.developed} MWp</span>
+        <span className="text-4xl xl:text-6xl font-medium">
+          {project.developed} MWp
+        </span>
         <p className="text-sm text-gray-600">{project.note}</p>
       </div>
     </div>
@@ -157,19 +159,19 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 p-12 rounded-3xl shadow-lg ${
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-12 py-20 rounded-3xl shadow-lg ${
                     index % 4 === 0 ? "md:right-32" : "md:left-32"
                   }`}
                 >
                   <div className="flex flex-col h-full">
                     {/* Project 1 */}
-                    <div className="flex-1 mb-4">{renderProject(project)}</div>
+                    <div className="flex-1">{renderProject(project)}</div>
 
                     {/* Separator */}
                     <hr className="border-t border-gray-300 my-4" />
 
                     {/* Common Text Area */}
-                    <div className="flex-1 my-4">
+                    <div className="flex-1">
                       <h4 className="text-lg font-semibold mb-2">
                         {cardContent[cardContentIndex].title}
                       </h4>
@@ -183,7 +185,7 @@ export default function ReferenceParallaxGallery() {
 
                     {/* Project 2 */}
                     {index + 1 < projects.length && (
-                      <div className="flex-1 mt-4">
+                      <div className="flex-1">
                         {renderProject(projects[index + 1])}
                       </div>
                     )}
