@@ -96,7 +96,7 @@ export default function AboutUsSectionWithNumbers() {
             hidden: { x: "100%" },
           }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="rounded-3xl px-5 py-8 lg:px-10 lg:py-10 w-full lg:w-[45%] flex flex-col justify-center"
+          className="rounded-3xl px-5 py-0 xl:py-8 lg:px-10 lg:py-10 w-full lg:w-[45%] flex flex-col justify-center"
         >
           <div className="grid xl:grid-cols-2 grid-cols-1 gap-x-10 gap-y-8 xl:gap-y-16">
             {infoCards.map((card, index) => (
