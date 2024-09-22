@@ -1,6 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import CzechFlagSVG from "./CzechFlagSVG";
+import EnglishFlagSVG from "./EnglishFlagSVG";
 
 export default function LanguageSwitcher() {
   const router = useRouter();
@@ -14,11 +16,11 @@ export default function LanguageSwitcher() {
     <div className="flex gap-4">
       {/* Link component automatically handles locale-aware routing */}
       <button className="text-4xl" onClick={() => toggleLocale("en")}>
-        🇬🇧
+        <EnglishFlagSVG />
       </button>
 
       <button className="text-4xl" onClick={() => toggleLocale("cs")}>
-        🇨🇿
+        <CzechFlagSVG />
       </button>
     </div>
   );

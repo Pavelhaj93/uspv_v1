@@ -12,6 +12,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import AutoScroll from "embla-carousel-auto-scroll";
 import SectionTitle from "@/components/SectionTitle";
+import { useTranslations } from "next-intl";
 
 const partners = [
   "/images/partners/erste_group.svg",
@@ -29,9 +30,10 @@ const partners = [
 ];
 
 export default function PartnersCarousel() {
+  const t = useTranslations("partnersSection");
   return (
     <section id="partnersSection" className="bg-white w-full p-5">
-      <SectionTitle title="PARTNERS" subtitle="Powering progress, Together" />
+      <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <Carousel
         opts={{
           align: "start",
@@ -50,19 +52,17 @@ export default function PartnersCarousel() {
           {partners.map((partner, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6"
+              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6 2xl:basis-1/8"
             >
               <div className="p-1">
-                <div className="max-w-[200px] max-h-[200px]">
-                  <CardContent className="flex items-center justify-center p-6 h-[200px]">
-                    <Image
-                      src={partner}
-                      alt={`Partner ${index + 1}`}
-                      width={200}
-                      height={200}
-                      className="object-contain max-w-full max-h-full"
-                    />
-                  </CardContent>
+                <div className="flex items-center w-[140px] h-[100px]">
+                  <Image
+                    src={partner}
+                    alt={`Partner ${index + 1}`}
+                    height={100}
+                    width={140}
+                    className="object-contain"
+                  />
                 </div>
               </div>
             </CarouselItem>

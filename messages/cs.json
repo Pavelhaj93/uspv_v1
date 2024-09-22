@@ -12,12 +12,12 @@
     "switchToCzech": "cz"
   },
   "hero": {
-    "title": "USPV",
-    "subtitle": "Fotovoltaická",
-    "group": "skupina"
+    "title": "Zvolte zelenou cestu s obnovitelnou energií.",
+    "subtitle": "Vedení revoluce v solární energii. 100 % ekologické, 100 % inovativní."
   },
-  "aboutUsSection": {
-    "title": "V několika číslech...",
+  "numbersSection": {
+    "title": "V ČÍSLECH",
+    "subtitle": "Naše úspěchy ",
     "cards": {
       "card1": {
         "title": "na trhu",
@@ -28,39 +28,73 @@
         "suffix": "+"
       },
       "card3": {
-        "title": "milionů € v portfoliu",
-        "suffix": "+mil. €"
+        "title": "portfolio",
+        "suffix": "+ mil. €"
       },
       "card4": {
         "title": "instalovaného výkonu",
-        "suffix": "+MWp"
+        "suffix": "+ MWp"
       },
       "card5": {
         "title": "obrat",
-        "suffix": "+mil. €"
+        "suffix": "+ mil. €"
       },
       "card6": {
-        "title": "CO2 emisí zachráněno",
-        "suffix": "+mil. tun"
+        "title": "CO2 emisí ušetřeno",
+        "suffix": "+ mil. tun"
       }
     }
   },
+  "aboutUsSection": {
+    "title": "O NÁS",
+    "subtitle": "Něco málo o naší společnosti"
+  },
   "referencesSection": {
-    "title": "Development fotovoltaiických projektů",
-    "subtitle": "Naše skupina vyvinula/podporovala vývoj FV a postavila FV o celkové velikosti přes 900 MWp",
-    "cards": {
+    "title": "NAŠE REFENCE",
+    "subtitle": "Projekty, na které jsme hrdí",
+    "projects": {
+      "project1": {
+        "country": "Česká republika",
+        "note": "vývoj a výstavba"
+      },
+      "project2": {
+        "country": "Spojené království",
+        "note": "vývoj a výstavba"
+      },
+      "project3": {
+        "country": "Rumunsko",
+        "note": "vývoj a výstavba"
+      },
+      "project4": {
+        "country": "Ukrajina",
+        "note": "vývoj a výstavba / EPC"
+      },
+      "project5": {
+        "country": "Turecko",
+        "note": "vývojový poradce"
+      },
+      "project6": {
+        "country": "Kazachstán",
+        "note": "dodání návrhu a inženýring fotovoltaických elektráren"
+      }
+    },
+    "cardContent": {
       "card1": {
-        "title": "Vyvinuté projekty",
-        "suffix": "+"
+        "title": "Budování vedoucího portfolia solární energie v České republice",
+        "text": "Společnost se zaměřila na vývoj významného portfolia fotovoltaických elektráren v České republice, aby reagovala na vysokou poptávku po obnovitelné energii a přizpůsobila se rozvoji energetického trhu."
       },
       "card2": {
-        "title": "Instalovaný výkon",
-        "suffix": "+MWp"
+        "title": "Let Osvědčených zkušeností",
+        "text": "S více než 1,2 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
       },
       "card3": {
-        "title": "Obrat",
-        "suffix": "+mil. €"
+        "title": "Skupina aktuálně vlastní a provozuje PV o výkonu 33MWp",
+        "text": "V České republice bylo vyvinuto celkem 7 MWp, následováno 6 MWp v Rumunsku. Dále byl dokončen projekt o výkonu 20 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
       }
     }
+  },
+  "partnersSection": {
+    "title": "PARTNEŘI",
+    "subtitle": "Podporujeme pokrok, společně"
   }
 }
