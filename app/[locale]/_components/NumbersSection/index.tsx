@@ -75,7 +75,17 @@ export default function AboutUsSectionWithNumbers() {
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
         {/* Left side with the World Map */}
-        <div className="relative w-full lg:w-[55%] rounded-3xl overflow-hidden">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { x: 0 },
+            hidden: { x: "-100%" },
+          }}
+          transition={{ type: "spring", stiffness: 80, damping: 20 }}
+          className="relative w-full lg:w-[55%] rounded-3xl overflow-hidden"
+        >
           <Image
             src="/images/worldMap_v3.png"
             alt="World Map"
@@ -84,7 +94,7 @@ export default function AboutUsSectionWithNumbers() {
             className="rounded-3xl"
             loading="lazy" // Lazy load the image
           />
-        </div>
+        </motion.div>
 
         {/* Right side with numbers, taking the remaining width */}
         <motion.div
@@ -96,7 +106,7 @@ export default function AboutUsSectionWithNumbers() {
             hidden: { x: "100%" },
           }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="rounded-3xl px-5 py-0 xl:py-8 lg:px-10 lg:py-10 w-full lg:w-[45%] flex flex-col justify-center"
+          className="rounded-3xl px-0 xl:px-5 py-0 xl:py-8 lg:px-10 lg:py-10 w-full lg:w-[45%] flex flex-col justify-center"
         >
           <div className="grid xl:grid-cols-2 grid-cols-1 gap-x-10 gap-y-8 xl:gap-y-16">
             {infoCards.map((card, index) => (
@@ -108,7 +118,7 @@ export default function AboutUsSectionWithNumbers() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col justify-center items-left"
               >
-                <div className="border-l-2 border-black pl-8 flex flex-col gap-4">
+                <div className="border-l-2 border-black pl-4 xl:pl-8 flex flex-col gap-4">
                   <div className="text-4xl lg:text-5xl font-normal tracking-wide">
                     {index === 3 ? (
                       <CountUp

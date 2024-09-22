@@ -149,17 +149,17 @@ export default function ReferenceParallaxGallery() {
             >
               <div className="w-full h-full flex flex-col md:flex-row">
                 {/* Image */}
-                <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_40px)] md:h-[calc(100%_-_20px)]">
+                <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_40px)] md:h-[calc(100%_-_20px)] ">
                   <Image
                     src={project.image}
                     alt={`Project in ${project.country}`}
                     layout="fill"
-                    className="rounded-3xl lg:rounded-t-3xl rounded-t-none object-cover"
+                    className="rounded-3xl lg:rounded-t-3xl object-cover"
                   />
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-12 py-20 rounded-3xl shadow-lg ${
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-0 xl:px-12 py-4 xl:py-20 rounded-3xl  xl:shadow-lg ${
                     index % 4 === 0 ? "md:right-32" : "md:left-32"
                   }`}
                 >
