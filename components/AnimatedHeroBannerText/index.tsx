@@ -40,7 +40,7 @@ const AnimatedText = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="absolute mx-auto w-[calc(100vw_-_40px)] lg:w-auto flex flex-col items-start justify-end text-black bg-white z-0 bottom-16 lg:left-20 left-5 rounded-3xl py-5 px-3 lg:pl-7 lg:pr-4 opacity-70"
+      className="absolute mx-auto w-[calc(100vw_-_40px)] lg:w-auto flex flex-col items-start justify-end text-black bg-white/70 z-0 bottom-16 lg:bottom-20 lg:left-20 left-5 rounded-3xl py-5 lg:py-10 px-5 lg:px-10"
     >
       {/* Text Container */}
       <motion.div
@@ -50,7 +50,7 @@ const AnimatedText = () => {
         {/* Title Animation */}
         <motion.h1
           variants={titleVariants}
-          className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-normal lg:font-light"
+          className="text-3xl md:text-3xl lg:text-4xl xl:text-6xl tracking-tighter font-medium"
         >
           {t("title")}
         </motion.h1>

@@ -74,13 +74,13 @@ export default function ReferenceParallaxGallery() {
       text: t("cardContent.card1.text"),
     },
     {
-      title: `${Math.floor(new Date().getFullYear() - 2006)} ${t(
-        "cardContent.card2.title"
-      )}`,
+      title: t("cardContent.card2.title"),
       text: t("cardContent.card2.text"),
     },
     {
-      title: t("cardContent.card3.title"),
+      title: `${Math.floor(new Date().getFullYear() - 2006)} ${t(
+        "cardContent.card3.title"
+      )}`,
       text: t("cardContent.card3.text"),
     },
   ];
@@ -116,7 +116,7 @@ export default function ReferenceParallaxGallery() {
     <div className="flex flex-col h-full justify-between gap-4">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
-          <h3 className="text-2xl font-bold">{project.country}</h3>
+          <h3 className="text-xl font-medium">{project.country}</h3>
           <span className="scale-[80%]">{project.icon}</span>
         </div>
         <p className="text-sm text-gray-600">{project.years}</p>
@@ -159,8 +159,8 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 rounded-b-none lg:rounded-b-3xl md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-0 xl:px-12 py-4 xl:py-20 rounded-3xl  xl:shadow-lg ${
-                    index % 4 === 0 ? "md:right-32" : "md:left-32"
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 md:py-10 lg:py-16 xl:py-20 rounded-3xl xl:shadow-lg ${
+                    index % 4 === 0 ? "md:right-24" : "md:left-14"
                   }`}
                 >
                   <div className="flex flex-col h-full">
@@ -172,7 +172,7 @@ export default function ReferenceParallaxGallery() {
 
                     {/* Common Text Area */}
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold mb-2">
+                      <h4 className="text-xl font-medium mb-2">
                         {cardContent[cardContentIndex].title}
                       </h4>
                       <p className="text-sm text-gray-600">

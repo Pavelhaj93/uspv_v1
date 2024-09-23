@@ -15,12 +15,12 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex gap-4">
       {/* Link component automatically handles locale-aware routing */}
-      <button className="text-4xl" onClick={() => toggleLocale("en")}>
-        <EnglishFlagSVG />
+      <button className="text-2xl" onClick={() => toggleLocale("en")}>
+        <EnglishFlagSVG className="size-6" />
       </button>
 
-      <button className="text-4xl" onClick={() => toggleLocale("cs")}>
-        <CzechFlagSVG />
+      <button className="text-2xl" onClick={() => toggleLocale("cs")}>
+        <CzechFlagSVG className="size-6" />
       </button>
     </div>
   );
