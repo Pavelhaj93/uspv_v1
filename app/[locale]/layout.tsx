@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { NextIntlClientProvider } from "next-intl";
@@ -7,15 +6,19 @@ import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n";
 import localFont from "next/font/local";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
+// Import Segoe UI with multiple weights
+const segoeUI = localFont({
+  src: [
+    { path: "../../public/fonts/bold.ttf", weight: "700", style: "normal" }, // Bold
+    {
+      path: "../../public/fonts/semibold.ttf",
+      weight: "600",
+      style: "normal",
+    }, // SemiBold
+    { path: "../../public/fonts/normal.ttf", weight: "400", style: "normal" }, // Normal
+    { path: "../../public/fonts/light.ttf", weight: "300", style: "light" }, // Light
+  ],
   display: "swap",
-  variable: "--font-montserrat",
-});
-
-const myFont = localFont({
-  src: "../../public/fonts/RoxboroughCF-Regular.otf",
-  variable: "--font-roxborough",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +42,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${myFont.variable}`}>
+      <body className={segoeUI.className}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}

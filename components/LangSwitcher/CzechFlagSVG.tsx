@@ -1,12 +1,13 @@
 import React from "react";
 
-const CzechFlagSVG = () => {
+const CzechFlagSVG = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
       viewBox="0 0 32 32"
+      className={className}
     >
       <path
         d="M1,24c0,2.209,1.791,4,4,4H27c2.209,0,4-1.791,4-4V15H1v9Z"

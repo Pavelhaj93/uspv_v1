@@ -40,8 +40,8 @@
         "suffix": "+ mil. €"
       },
       "card6": {
-        "title": "CO2 emisí ušetřeno",
-        "suffix": "+ mil. tun"
+        "title": "tun CO2 emisí ušetřeno",
+        "suffix": "+ mil."
       }
     }
   },
@@ -81,15 +81,15 @@
     "cardContent": {
       "card1": {
         "title": "Budování vedoucího portfolia solární energie v České republice",
-        "text": "Společnost se zaměřila na vývoj významného portfolia fotovoltaických elektráren v České republice, aby reagovala na vysokou poptávku po obnovitelné energii a přizpůsobila se rozvoji energetického trhu."
+        "text": "Společnost se zaměřila na vývoj portfolia fotovoltaických elektráren v České republice, aby reagovala na vysokou poptávku po obnovitelné energii a přizpůsobila se rozvoji energetického trhu."
       },
       "card2": {
-        "title": "let osvědčených zkušeností",
-        "text": "S více než 1,2 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
-      },
-      "card3": {
         "title": "Skupina aktuálně vlastní a provozuje PV o výkonu 33MWp",
         "text": "V České republice bylo vyvinuto celkem 7 MWp, následováno 6 MWp v Rumunsku. Dále byl dokončen projekt o výkonu 20 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
+      },
+      "card3": {
+        "title": "let osvědčených zkušeností",
+        "text": "S více než 1,2 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
       }
     }
   },

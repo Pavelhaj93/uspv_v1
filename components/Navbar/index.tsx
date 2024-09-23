@@ -88,10 +88,10 @@ const Navbar = () => {
       {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
         className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white 
-        h-16 ${isOpen ? "h-screen" : ""}`}
+        h-14 ${isOpen ? "h-screen" : ""}`}
       />
       <div
-        className="relative mx-auto flex h-16 items-center justify-between px-4 lg:px-8"
+        className="relative mx-auto flex h-14 items-center justify-between px-4 lg:px-8"
         style={{ zIndex: 10 }}
       >
         <Link
@@ -101,20 +101,20 @@ const Navbar = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <LogoSVG color={isHovered ? "#ecc69b" : "#000000"} />
+          <LogoSVG color={isHovered ? "#b4bec3" : "#000000"} />
 
           <span className="sr-only">
             USPV company - solar power and energy independence
           </span>
         </Link>
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-7">
           <nav className="font-medium">
-            <ul className="flex items-baseline gap-10">
+            <ul className="flex items-baseline gap-7">
               {links.map((link) => (
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out font-light text-black tracking-wider`}
+                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out font-light text-black`}
                     prefetch={false}
                   >
                     {link.name}

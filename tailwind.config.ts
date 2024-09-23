@@ -14,17 +14,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        montserrat: ["var(--font-montserrat)"],
-        roxborough: ["var(--font-roxborough)"],
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        primary: "#ecc69b",
+        primary: "#b4bec3",
       },
       flexBasis: {
         "1/8": "12.5%",

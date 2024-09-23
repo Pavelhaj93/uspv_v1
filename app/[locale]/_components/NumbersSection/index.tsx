@@ -47,7 +47,7 @@ export default function AboutUsSectionWithNumbers() {
     {
       title: t("cards.card4.title"),
       start: 411,
-      end: 1232,
+      end: 1150,
       suffix: "MWp",
       duration: 5,
     },
@@ -73,7 +73,7 @@ export default function AboutUsSectionWithNumbers() {
       className="w-full h-screen lg:h-full flex flex-col gap-5 px-5 pb-5"
     >
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-      <div className="flex h-full flex-col lg:flex-row lg:justify-between gap-5">
+      <div className="flex h-full flex-col lg:flex-row lg:justify-between md:gap-20 lg:gap-36">
         {/* Left side with the World Map */}
         <motion.div
           initial="hidden"
@@ -84,7 +84,7 @@ export default function AboutUsSectionWithNumbers() {
             hidden: { x: "-100%" },
           }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="relative w-full lg:w-[55%] rounded-3xl overflow-hidden"
+          className="relative left-14 w-full lg:w-[55%] rounded-3xl overflow-hidden"
         >
           <Image
             src="/images/worldMap_v3.png"
@@ -108,7 +108,7 @@ export default function AboutUsSectionWithNumbers() {
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
           className="rounded-3xl px-0 xl:px-5 py-0 xl:py-8 lg:px-10 lg:py-10 w-full lg:w-[45%] flex flex-col justify-center"
         >
-          <div className="grid xl:grid-cols-2 grid-cols-1 gap-x-10 gap-y-8 xl:gap-y-16">
+          <div className="grid xl:grid-cols-2 grid-cols-1 gap-x-0 gap-y-8 xl:gap-y-16">
             {infoCards.map((card, index) => (
               <motion.div
                 key={card.title}
@@ -118,8 +118,8 @@ export default function AboutUsSectionWithNumbers() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col justify-center items-left"
               >
-                <div className="border-l-2 border-black pl-4 xl:pl-8 flex flex-col gap-4">
-                  <div className="text-4xl lg:text-5xl font-normal tracking-wide">
+                <div className="border-l-2 border-black pl-4 xl:pl-8 flex flex-col gap-2">
+                  <div className="text-4xl lg:text-5xl font-medium">
                     {index === 3 ? (
                       <CountUp
                         start={card.start}
@@ -153,7 +153,7 @@ export default function AboutUsSectionWithNumbers() {
                       />
                     )}
                   </div>
-                  <h2 className="text-lg lg:text-xl font-light text-gray-700">
+                  <h2 className="text-md lg:text-lg font-light text-gray-700">
                     {card.title}
                   </h2>
                 </div>

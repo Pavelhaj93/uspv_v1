@@ -32,20 +32,17 @@ const SectionTitle = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col gap-3 my-4 md:my-6 lg:my-8 xl:my-10 lg:pl-20 text-left"
+      className="flex flex-col gap-3 my-4 md:my-6 lg:my-8 xl:my-10 lg:pl-14 text-left"
     >
       {/* Title */}
-      <motion.h2
-        variants={titleVariants}
-        className="text-xl font-light ml-1 tracking-wider"
-      >
+      <motion.h2 variants={titleVariants} className="text-lg font-light ml-1">
         {title}
       </motion.h2>
 
       {/* Subtitle */}
       <motion.h3
         variants={subtitleVariants}
-        className="xl:text-6xl text-4xl font-light tracking-wide"
+        className="xl:text-[3.25rem] text-4xl font-normal tracking-tighter"
       >
         {subtitle}
       </motion.h3>

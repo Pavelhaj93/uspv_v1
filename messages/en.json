@@ -40,8 +40,8 @@
         "suffix": "+ mil. €"
       },
       "card6": {
-        "title": "CO2 emissions avoided",
-        "suffix": "+ mil. tons"
+        "title": "tons CO2 emissions avoided",
+        "suffix": "+ mil."
       }
     }
   },
@@ -84,12 +84,12 @@
         "text": "Company has focused to develop significant portfolio of solar power plants in the Czech Republic to reflect the high demand for renewable energy as well as to respond to the energy market development."
       },
       "card2": {
-        "title": "Years Proven Track Record",
-        "text": "With over 1.2 GWp in solar power plant projects developed across multiple countries, the company has established a strong presence in the global renewable energy market."
-      },
-      "card3": {
         "title": "Group Currently Owns and Operates PV of 33MWp",
         "text": "In the Czech Republic, a total of 7 MWp was developed, followed by 6 MWp in Romania. Additionally, a 20 MWp project, financed by the European Bank for Reconstruction and Development (EBRD), was completed in Ukraine."
+      },
+      "card3": {
+        "title": "Years Proven Track Record",
+        "text": "With over 1.2 GWp in solar power plant projects developed across multiple countries, the company has established a strong presence in the global renewable energy market."
       }
     }
   },
