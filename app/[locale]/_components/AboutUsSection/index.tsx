@@ -68,7 +68,7 @@ export default function Component() {
                 {company.description}
               </p>
             </div>
-            <div>
+            <div className="flex justify-end">
               <Link
                 href={company.visitUrl}
                 className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-2 rounded-full text-lg font-semibold transition-colors duration-300 ease-in-out text-center inline-block mt-auto"
