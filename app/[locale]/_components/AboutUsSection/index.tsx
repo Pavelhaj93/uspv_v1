@@ -50,7 +50,7 @@ export default function Component() {
           hidden: { opacity: 0, y: 50 },
         }}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
-        className="bg-primary rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col lg:flex-row gap-20"
+        className="bg-primary rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col lg:flex-row lg:gap-20 gap-10"
       >
         {companies.map((company, index) => (
           <div
