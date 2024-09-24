@@ -116,8 +116,8 @@ export default function ReferenceParallaxGallery() {
     <div className="flex flex-col h-full justify-between gap-4">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
-          <h3 className="text-xl font-medium">{project.country}</h3>
-          <span className="scale-[80%]">{project.icon}</span>
+          <h3 className="text-xl font-medium uppercase">{project.country}</h3>
+          <span className="scale-[70%]">{project.icon}</span>
         </div>
         <p className="text-sm text-gray-600">{project.years}</p>
       </div>
