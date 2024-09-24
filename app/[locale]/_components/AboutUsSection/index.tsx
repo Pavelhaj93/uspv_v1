@@ -32,7 +32,7 @@ const companies: Company[] = [
   },
 ];
 
-export default function AboutUsSection() {
+export default function Component() {
   const t = useTranslations("aboutUsSection");
 
   return (
@@ -50,7 +50,7 @@ export default function AboutUsSection() {
           hidden: { opacity: 0, y: 50 },
         }}
         transition={{ type: "spring", stiffness: 50, damping: 20 }}
-        className="bg-primary  rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col lg:flex-row gap-20"
+        className="bg-primary rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col lg:flex-row gap-20"
       >
         {companies.map((company, index) => (
           <div
@@ -61,20 +61,20 @@ export default function AboutUsSection() {
               <h3 className="text-lg font-light tracking-tight mb-2">
                 {company.subtitle}
               </h3>
-              <div className="flex flex-col sm:flex-row justify-between mb-10 gap-4">
-                <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter">
-                  {company.name}
-                </h3>
-                <Link
-                  href={company.visitUrl}
-                  className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-2 rounded-full text-lg font-semibold transition-colors duration-300 ease-in-out text-center inline-block"
-                >
-                  {company.visitText}
-                </Link>
-              </div>
+              <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-10">
+                {company.name}
+              </h3>
               <p className="text-sm lg:text-base leading-6 mb-6">
                 {company.description}
               </p>
+            </div>
+            <div>
+              <Link
+                href={company.visitUrl}
+                className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-2 rounded-full text-lg font-semibold transition-colors duration-300 ease-in-out text-center inline-block mt-auto"
+              >
+                {company.visitText}
+              </Link>
             </div>
           </div>
         ))}
