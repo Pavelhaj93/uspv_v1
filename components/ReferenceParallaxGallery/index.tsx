@@ -123,7 +123,7 @@ export default function ReferenceParallaxGallery() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <span className="text-4xl xl:text-6xl font-medium">
+        <span className="text-4xl xl:text-5xl 2xl:text-6xl font-medium">
           {project.developed} MWp
         </span>
         <p className="text-sm text-gray-600">{project.note}</p>
@@ -159,9 +159,10 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 md:py-10 lg:py-16 xl:py-20 rounded-3xl xl:shadow-lg ${
-                    index % 4 === 0 ? "md:right-24" : "md:left-14"
-                  }`}
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 
+                    bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 2xl:py-16 rounded-3xl xl:shadow-lg ${
+                      index % 4 === 0 ? "md:right-24" : "md:left-14"
+                    }`}
                 >
                   <div className="flex flex-col h-full">
                     {/* Project 1 */}
