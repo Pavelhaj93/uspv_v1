@@ -105,7 +105,7 @@ export default function AboutUsSectionWithNumbers() {
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
           className="w-full lg:w-1/2"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-y-16 transform 2xl:translate-x-[15%]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-y-16 transform 2xl:translate-x-[15%]  sm:translate-x-[12%] lg:translate-x-[5%] translate-x-0">
             {infoCards.map((card, index) => (
               <motion.div
                 key={card.title}
@@ -115,8 +115,8 @@ export default function AboutUsSectionWithNumbers() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col justify-center items-start"
               >
-                <div className="border-l-2 border-black pl-4 lg:pl-8 flex flex-col gap-2">
-                  <div className="text-4xl lg:text-5xl font-medium">
+                <div className="border-l-2 border-black pl-4 xl:pl-8 flex flex-col gap-2">
+                  <div className="text-4xl xl:text-5xl font-medium">
                     {index === 3 ? (
                       <CountUp
                         start={card.start}
