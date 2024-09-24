@@ -40,7 +40,7 @@ const AnimatedText = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="absolute mx-auto w-[calc(100vw_-_40px)] lg:w-auto flex flex-col items-start justify-end text-black bg-white/70 z-0 bottom-16 lg:bottom-20 lg:left-20 left-5 rounded-3xl py-5 lg:py-10 px-5 lg:px-14"
+      className="absolute mx-auto w-[calc(100vw_-_40px)] lg:w-auto flex flex-col items-start justify-end text-black bg-white/70 z-0 bottom-16 lg:bottom-20 lg:left-20 left-5 rounded-3xl py-5 lg:py-7 px-5 lg:px-14"
     >
       {/* Text Container */}
       <motion.div
