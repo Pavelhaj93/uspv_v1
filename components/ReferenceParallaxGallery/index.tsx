@@ -23,7 +23,7 @@ export default function ReferenceParallaxGallery() {
       icon: <CzechFlagSVG />,
       years: "2006-10",
       developed: 7,
-      image: "/images/cards/card_1.jpg",
+      image: "/images/cards/card_4.jpg",
       note: t("projects.project1.note"),
     },
     {
@@ -39,7 +39,7 @@ export default function ReferenceParallaxGallery() {
       icon: <RomaniaFlagSVG />,
       years: "2013-17",
       developed: 30 + 6,
-      image: "/images/cards/card_4.jpg",
+      image: "/images/cards/card_1.jpg",
       note: t("projects.project3.note"),
     },
     {
