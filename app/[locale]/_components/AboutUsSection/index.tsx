@@ -44,13 +44,20 @@ export default function Page() {
               hidden: { opacity: 0, y: 50 },
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
-            className="border-black border-2 text-gray-800 rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col backdrop-blur-sm"
+            className="border-2 border-black text-gray-800 rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col backdrop-blur-sm"
           >
+            <h3 className="text-lg font-light tracking-tight mb-2">
+              {t("companies.USPV.subtitle")}
+            </h3>
             <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-5 xl:mb-8">
               {t("companies.USPV.title")}
             </h3>
-            <p className="lg:text-lg ">{t("companies.USPV.description1")}</p>
-            <p className="lg:text-lg ">{t("companies.USPV.description2")}</p>
+            <p className="lg:text-lg font-light">
+              {t("companies.USPV.description1")}
+            </p>
+            <p className="lg:text-lg font-light">
+              {t("companies.USPV.description2")}
+            </p>
           </motion.div>
 
           <motion.div
@@ -81,7 +88,9 @@ export default function Page() {
                   delay: index * 0.2,
                 }}
                 className={`flex-1 flex flex-col justify-between rounded-3xl p-6 lg:p-10 lg:px-14 backdrop-blur-sm ${
-                  index === 0 ? "bg-gray-200" : "bg-gray-300"
+                  index === 0
+                    ? "bg-gradient-to-r from-[#f0f0f0] to-[#d9d9d9]"
+                    : "bg-gradient-to-r from-[#d9d9d9] to-[#bfbfbf]"
                 }`}
               >
                 <div>
@@ -106,8 +115,8 @@ export default function Page() {
               </motion.div>
             ))}
           </motion.div>
+          <ParticleBackground className="z-10" />
         </div>
-        <ParticleBackground className="z-10" />
       </section>
     </>
   );
