@@ -47,7 +47,25 @@
   },
   "aboutUsSection": {
     "title": "O NÁS",
-    "subtitle": "Něco málo o naší společnosti"
+    "subtitle": "Pár slov o naší společnosti",
+    "companies": {
+      "USPV": {
+        "subtitle": "JSME",
+        "title": "USPV",
+        "description1": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě establována na českém i zahraničním trhu. Jejím vlastníkem je český podnikatel Tomáš Korostenský. ",
+        "description2": "Kromě fotovoltaických elektráren (FVE) skupina USPV vlastní také portfolio přípojných bodů k FVE, ke kterým plánuje v blízké budoucnosti připojit další výrobny po celé ČR. Skupina USPV se zaměřuje na lokality, kde výstavba FVE může v souladu s novou legislativou podpořit energetickou soběstačnost ČR a nezávislost obcí, čímž umožní obcím větší kontrolu a flexibilitu v energetické politice."
+      },
+      "Ekotechnik": {
+        "subtitle": "VE SPOLUPRÁCI S",
+        "title": "Ekotechnik",
+        "description": "Společnost EKOTECHNIK s.r.o. působí na českém trhu již od roku 1990 a specializuje se na návrh, výstavbu a provoz solárních elektráren. Nabízí komplexní služby od počátečního návrhu projektu, přes zajištění veškerých povolení, až po realizaci a servis fotovoltaických systémů. Díky dlouholetým zkušenostem dokáže navrhnout řešení na míru, která splňují specifické potřeby obcí a menších měst. Důraz klade na analýzu energetických potřeb, poskytování komplexních energetických služeb s maximálním užitkem ve formě úspor, rychlý servis a nadstandardní zákaznickou péči. EKOTECHNIK s.r.o. zároveň nabízí ekologická řešení šetrná k životnímu prostředí."
+      },
+      "SolarKit": {
+        "subtitle": "A TAKÉ",
+        "title": "Solar Kit",
+        "description": "Solar Kit Hungary je dynamická společnost se sídlem v Budapešti, specializující se na velkoobchodní distribuci fotovoltaických (PV) systémů. Založena v roce 2016, rychle expandovala nejen v Maďarsku, ale i do dalších evropských zemí. Nabízí komplexní solární řešení a distribuci PV produktů pro rezidenční, komerční i průmyslové účely. Díky partnerství se značkami jako Huawei, Deye a SolaX nabízí konkurenceschopné ceny a vysokou kvalitu. Společnost se pyšní technickou podporou, vzděláváním partnerů, rozsáhlým skladem a efektivní logistikou. S ročním obratem přes 17 milionů EUR a více než 4000 instalovanými systémy patří mezi významné hráče v solárním průmyslu."
+      }
+    }
   },
   "referencesSection": {
     "title": "NAŠE REFENCE",
