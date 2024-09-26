@@ -35,15 +35,15 @@ export default function ParticleBackground({
     updateCanvasSize();
 
     const particles: Particle[] = [];
-    const particleCount = 50;
+    const particleCount = 40; // Reduced from 50 to 40
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: Math.random() * 3 + 1,
-        speedX: Math.random() * 2 - 1,
-        speedY: Math.random() * 2 - 1,
+        speedX: (Math.random() * 2 - 1) * 0.8, // Reduced speed by 20%
+        speedY: (Math.random() * 2 - 1) * 0.8, // Reduced speed by 20%
       });
     }
 

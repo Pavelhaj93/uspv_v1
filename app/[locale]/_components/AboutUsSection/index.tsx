@@ -29,7 +29,6 @@ export default function Page() {
 
   return (
     <>
-      {/* First two sections (not shown) */}
       <section
         id="aboutUsSection"
         className="w-full flex flex-col gap-5 px-5 pb-5 relative min-h-screen bg-transparent"
@@ -45,11 +44,8 @@ export default function Page() {
               hidden: { opacity: 0, y: 50 },
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
-            className="bg-primary/80 text-black rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col backdrop-blur-sm"
+            className="border-2 border-black text-gray-800 rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col backdrop-blur-sm"
           >
-            <h3 className="text-lg font-light tracking-tight mb-2">
-              {t("companies.USPV.subtitle")}
-            </h3>
             <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-5 xl:mb-8">
               {t("companies.USPV.title")}
             </h3>
@@ -61,7 +57,6 @@ export default function Page() {
             </p>
           </motion.div>
 
-          {/* Motion div for companies with alternating animation */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -89,7 +84,11 @@ export default function Page() {
                   damping: 20,
                   delay: index * 0.2,
                 }}
-                className="flex-1 flex flex-col justify-between bg-primary/80 rounded-3xl p-6 lg:p-10 lg:px-14 backdrop-blur-sm"
+                className={`flex-1 flex flex-col justify-between rounded-3xl p-6 lg:p-10 lg:px-14 backdrop-blur-sm ${
+                  index === 0
+                    ? "bg-gradient-to-r from-[#f0f0f0] to-[#d9d9d9]"
+                    : "bg-gradient-to-r from-[#d9d9d9] to-[#bfbfbf]"
+                }`}
               >
                 <div>
                   <h3 className="text-lg font-light tracking-tight mb-2">
@@ -113,8 +112,8 @@ export default function Page() {
               </motion.div>
             ))}
           </motion.div>
+          <ParticleBackground className="z-10" />
         </div>
-        <ParticleBackground className="z-10" />
       </section>
     </>
   );
