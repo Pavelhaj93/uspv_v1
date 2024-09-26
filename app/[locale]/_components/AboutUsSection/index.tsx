@@ -46,9 +46,6 @@ export default function Page() {
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
             className="border-2 border-black text-gray-800 rounded-3xl p-6 lg:p-10 lg:px-14 w-full flex flex-col backdrop-blur-sm"
           >
-            <h3 className="text-lg font-light tracking-tight mb-2">
-              {t("companies.USPV.subtitle")}
-            </h3>
             <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-5 xl:mb-8">
               {t("companies.USPV.title")}
             </h3>
