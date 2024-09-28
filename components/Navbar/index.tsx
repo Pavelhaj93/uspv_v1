@@ -101,7 +101,7 @@ const Navbar = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <LogoSVG color={isHovered ? "#b4bec3" : "#000000"} />
+          <LogoSVG color={isHovered ? "#72b28f" : "#000000"} />
 
           <span className="sr-only">
             USPV company - solar power and energy independence
@@ -114,7 +114,7 @@ const Navbar = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={`uppercase hover:text-primary mt-4 transition duration-300 ease-in-out font-light text-black`}
+                    className={`uppercase hover:text-[#72b28f] mt-4 transition duration-300 ease-in-out font-light text-black`}
                     prefetch={false}
                   >
                     {link.name}

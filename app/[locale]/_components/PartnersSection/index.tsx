@@ -6,10 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import AutoScroll from "embla-carousel-auto-scroll";
 import SectionTitle from "@/components/SectionTitle";
 import { useTranslations } from "next-intl";
@@ -32,7 +29,7 @@ const partners = [
 export default function PartnersCarousel() {
   const t = useTranslations("partnersSection");
   return (
-    <section id="partnersSection" className="bg-white w-full p-5">
+    <section id="partnersSection" className="bg-white w-full p-5 mb-5">
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <Carousel
         opts={{
@@ -41,14 +38,14 @@ export default function PartnersCarousel() {
         }}
         plugins={[
           AutoScroll({
-            speed: 1,
+            speed: 0.9,
             stopOnInteraction: false,
             stopOnMouseEnter: true,
           }),
         ]}
         className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className="mt-5">
           {partners.map((partner, index) => (
             <CarouselItem
               key={index}
@@ -61,7 +58,7 @@ export default function PartnersCarousel() {
                     alt={`Partner ${index + 1}`}
                     height={100}
                     width={140}
-                    className="object-contain"
+                    className="object-contain "
                   />
                 </div>
               </div>

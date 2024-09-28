@@ -84,7 +84,7 @@ export default function AboutUsSectionWithNumbers() {
           className="w-full lg:w-1/2 h-[300px] lg:h-[400px] relative rounded-3xl overflow-hidden mb-10 lg:mb-0"
         >
           <Image
-            src="/images/worldMap_v3.png"
+            src="/images/map-3.png"
             alt="World Map"
             layout="fill"
             objectFit="cover"
@@ -105,7 +105,7 @@ export default function AboutUsSectionWithNumbers() {
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
           className="w-full lg:w-1/2"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 lg:gap-y-16 transform 2xl:translate-x-[12%]  sm:translate-x-[12%] lg:translate-x-[5%] translate-x-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 lg:gap-y-16 transform 2xl:translate-x-[12%]  sm:translate-x-[12%] lg:translate-x-[5%] translate-x-0">
             {infoCards.map((card, index) => (
               <motion.div
                 key={card.title}
