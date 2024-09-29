@@ -113,17 +113,19 @@ export default function ReferenceParallaxGallery() {
   }, []);
 
   const renderProject = (project: any) => (
-    <div className="flex flex-col h-full justify-between gap-4">
+    <div className="flex flex-col h-full justify-between gap-2 md:gap-4">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
-          <h3 className="text-xl font-medium uppercase">{project.country}</h3>
+          <h3 className="md:text-xl font-medium uppercase">
+            {project.country}
+          </h3>
           <span className="scale-[70%]">{project.icon}</span>
         </div>
         <p className="text-sm text-gray-600">{project.years}</p>
       </div>
 
-      <div className="flex flex-col gap-5">
-        <span className="text-4xl xl:text-5xl 2xl:text-6xl font-medium">
+      <div className="flex flex-col gap-2 md:gap-5">
+        <span className="text-2xl xl:text-5xl 2xl:text-6xl font-medium">
           {project.developed} MWp
         </span>
         <p className="text-sm text-gray-600">{project.note}</p>
@@ -173,7 +175,7 @@ export default function ReferenceParallaxGallery() {
 
                     {/* Common Text Area */}
                     <div className="">
-                      <h4 className="text-xl font-medium mb-2">
+                      <h4 className="md:text-xl font-medium mb-2">
                         {cardContent[cardContentIndex].title}
                       </h4>
                       <p className="text-sm text-gray-600">
