@@ -159,20 +159,20 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-auto h-2/3 
                     bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 2xl:py-16 rounded-3xl xl:shadow-lg ${
                       index % 4 === 0 ? "md:right-24" : "md:left-14"
                     }`}
                 >
                   <div className="flex flex-col h-full">
                     {/* Project 1 */}
-                    <div className="flex-1">{renderProject(project)}</div>
+                    <div className="">{renderProject(project)}</div>
 
                     {/* Separator */}
                     <hr className="border-t border-gray-300 my-4" />
 
                     {/* Common Text Area */}
-                    <div className="flex-1">
+                    <div className="">
                       <h4 className="text-xl font-medium mb-2">
                         {cardContent[cardContentIndex].title}
                       </h4>
@@ -186,7 +186,7 @@ export default function ReferenceParallaxGallery() {
 
                     {/* Project 2 */}
                     {index + 1 < projects.length && (
-                      <div className="flex-1">
+                      <div className="">
                         {renderProject(projects[index + 1])}
                       </div>
                     )}

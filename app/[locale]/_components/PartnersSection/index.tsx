@@ -29,7 +29,7 @@ const partners = [
 export default function PartnersCarousel() {
   const t = useTranslations("partnersSection");
   return (
-    <section id="partnersSection" className="bg-white w-full p-5 mb-5">
+    <section id="partnersSection" className="bg-white w-full p-5">
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <Carousel
         opts={{
@@ -43,13 +43,13 @@ export default function PartnersCarousel() {
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full"
+        className="w-full lg:mb-5 mt-5"
       >
-        <CarouselContent className="mt-5">
+        <CarouselContent>
           {partners.map((partner, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6 2xl:basis-1/8"
+              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6 2xl:basis-1/7"
             >
               <div className="p-1">
                 <div className="flex items-center w-[140px] h-[100px]">
@@ -58,7 +58,7 @@ export default function PartnersCarousel() {
                     alt={`Partner ${index + 1}`}
                     height={100}
                     width={140}
-                    className="object-contain "
+                    className="object-contain"
                   />
                 </div>
               </div>

@@ -68,9 +68,9 @@ export default function AboutUsSectionWithNumbers() {
   ];
 
   return (
-    <section id="aboutUsSection" className="w-full px-5">
+    <section id="aboutUsSection" className="w-full pb-5 px-5">
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-      <div className="mt-10 lg:mt-16 lg:px-14 flex flex-col lg:flex-row lg:justify-between lg:gap-5 lg:pr-0 xl:pr-14 xl:gap-10">
+      <div className="mt-10 lg:mt-16 flex flex-col lg:flex-row lg:justify-between">
         {/* Left side with the World Map */}
         <motion.div
           initial="hidden"
@@ -81,7 +81,7 @@ export default function AboutUsSectionWithNumbers() {
             hidden: { opacity: 0, x: "-100%" },
           }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="w-full lg:w-1/2 h-[300px] lg:h-[400px] relative rounded-3xl overflow-hidden mb-10 lg:mb-0"
+          className="w-full lg:w-[48%] h-[300px] lg:h-[400px] relative rounded-3xl overflow-hidden mb-10 lg:mb-0"
         >
           <Image
             src="/images/map-3.png"
@@ -103,9 +103,9 @@ export default function AboutUsSectionWithNumbers() {
             hidden: { opacity: 0, x: "100%" },
           }}
           transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="w-full lg:w-1/2"
+          className="w-full lg:w-[48%] flex justify-center"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 lg:gap-y-16 transform 2xl:translate-x-[12%]  sm:translate-x-[12%] lg:translate-x-[5%] translate-x-0">
+          <div className="grid grid-cols-2 gap-x-0 sm:gap-x-40 lg:gap-x-10 xl:gap-x-20 2xl:gap-x-40 gap-y-10 lg:gap-y-16 mx-auto">
             {infoCards.map((card, index) => (
               <motion.div
                 key={card.title}
@@ -116,7 +116,7 @@ export default function AboutUsSectionWithNumbers() {
                 className="flex flex-col justify-center items-start"
               >
                 <div className="border-l-2 border-black pl-4 xl:pl-8 flex flex-col gap-2">
-                  <div className="text-4xl xl:text-5xl font-medium">
+                  <div className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-medium">
                     {index === 3 ? (
                       <CountUp
                         start={card.start}

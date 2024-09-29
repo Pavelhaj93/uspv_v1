@@ -31,7 +31,7 @@ export default function Page() {
     <>
       <section
         id="aboutUsSection"
-        className="w-full flex flex-col gap-5 px-5 pb-5 relative min-h-screen bg-transparent"
+        className="w-full flex flex-col gap-5 px-5 pb-5 relative bg-transparent"
       >
         <div className="relative z-0">
           <SectionTitle title={t("title")} subtitle={t("subtitle")} />
@@ -44,7 +44,7 @@ export default function Page() {
               hidden: { opacity: 0, y: 50 },
             }}
             transition={{ type: "spring", stiffness: 50, damping: 20 }}
-            className="border-2 border-black text-gray-800 rounded-3xl p-6 lg:py-9 lg:px-14 w-full flex flex-col backdrop-blur-sm"
+            className="border-2 border-black text-gray-800 rounded-3xl p-5 lg:py-9 lg:px-14 w-full flex flex-col backdrop-blur-sm"
           >
             <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-5">
               {t("companies.USPV.title")}
@@ -84,7 +84,7 @@ export default function Page() {
                   damping: 20,
                   delay: index * 0.2,
                 }}
-                className={`flex-1 flex flex-col justify-between rounded-3xl p-6 lg:py-9 lg:px-14 backdrop-blur-sm ${
+                className={`flex-1 flex flex-col justify-between rounded-3xl p-5 lg:py-9 lg:px-14 backdrop-blur-sm ${
                   index === 0
                     ? "bg-gradient-to-r from-[#f0f0f0] to-[#d9d9d9]"
                     : "bg-gradient-to-r from-[#d9d9d9] to-[#bfbfbf]"
@@ -104,7 +104,7 @@ export default function Page() {
                 <div className="flex justify-end">
                   <Link
                     href={company.visitUrl}
-                    className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-2 rounded-full text-lg font-semibold transition-colors duration-300 ease-in-out text-center inline-block mt-auto transform -translate-x-1"
+                    className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-5 py-2 rounded-full text-lg font-semibold transition-colors duration-300 ease-in-out text-center inline-block mt-auto transform -translate-x-1"
                   >
                     {company.visitText}
                   </Link>
