@@ -156,13 +156,13 @@ export default function ReferenceParallaxGallery() {
                     src={project.image}
                     alt={`Project in ${project.country}`}
                     layout="fill"
-                    className="rounded-3xl lg:rounded-t-3xl object-cover"
+                    className="md:rounded-3xl rounded-b-3xl object-cover"
                   />
                 </div>
                 {/* Card */}
                 <div
                   className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-auto h-2/3 
-                    bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 2xl:py-16 rounded-3xl xl:shadow-lg ${
+                    bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 2xl:py-16 md:rounded-3xl xl:shadow-lg ${
                       index % 4 === 0 ? "md:right-24" : "md:left-14"
                     }`}
                 >
