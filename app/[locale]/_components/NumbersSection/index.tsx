@@ -70,7 +70,7 @@ export default function AboutUsSectionWithNumbers() {
   return (
     <section id="aboutUsSection" className="w-full pb-5 px-5">
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-      <div className="mt-10 lg:mt-16 flex flex-col lg:flex-row lg:justify-between">
+      <div className="mt-10 lg:mt-16 flex flex-col lg:flex-row lg:justify-between md:px-14">
         {/* Left side with the World Map */}
         <motion.div
           initial="hidden"
