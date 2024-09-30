@@ -6,10 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import AutoScroll from "embla-carousel-auto-scroll";
 import SectionTitle from "@/components/SectionTitle";
 import { useTranslations } from "next-intl";
@@ -41,18 +38,18 @@ export default function PartnersCarousel() {
         }}
         plugins={[
           AutoScroll({
-            speed: 1,
+            speed: 0.9,
             stopOnInteraction: false,
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full"
+        className="w-full lg:mb-5 mt-5"
       >
         <CarouselContent>
           {partners.map((partner, index) => (
             <CarouselItem
               key={index}
-              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6 2xl:basis-1/8"
+              className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/6 2xl:basis-1/7"
             >
               <div className="p-1">
                 <div className="flex items-center w-[140px] h-[100px]">

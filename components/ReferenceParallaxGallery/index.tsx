@@ -113,17 +113,19 @@ export default function ReferenceParallaxGallery() {
   }, []);
 
   const renderProject = (project: any) => (
-    <div className="flex flex-col h-full justify-between gap-4">
+    <div className="flex flex-col h-full justify-between gap-2 md:gap-4">
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
-          <h3 className="text-xl font-medium uppercase">{project.country}</h3>
+          <h3 className="md:text-xl font-medium uppercase">
+            {project.country}
+          </h3>
           <span className="scale-[70%]">{project.icon}</span>
         </div>
         <p className="text-sm text-gray-600">{project.years}</p>
       </div>
 
-      <div className="flex flex-col gap-5">
-        <span className="text-4xl xl:text-5xl 2xl:text-6xl font-medium">
+      <div className="flex flex-col gap-2 md:gap-5">
+        <span className="text-2xl xl:text-5xl 2xl:text-6xl font-medium">
           {project.developed} MWp
         </span>
         <p className="text-sm text-gray-600">{project.note}</p>
@@ -154,26 +156,26 @@ export default function ReferenceParallaxGallery() {
                     src={project.image}
                     alt={`Project in ${project.country}`}
                     layout="fill"
-                    className="rounded-3xl lg:rounded-t-3xl object-cover"
+                    className="md:rounded-3xl rounded-b-3xl object-cover"
                   />
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-[calc(100%_-_160px)] h-2/3 
-                    bg-white lg:opacity-90 px-5 md:px-10 xl:px-12 py-10 2xl:py-16 rounded-3xl xl:shadow-lg ${
+                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-auto h-2/3 
+                    bg-white lg:opacity-90 px-0 md:px-10 xl:px-12 py-5 md:py-10 2xl:py-16 md:rounded-3xl xl:shadow-lg ${
                       index % 4 === 0 ? "md:right-24" : "md:left-14"
                     }`}
                 >
                   <div className="flex flex-col h-full">
                     {/* Project 1 */}
-                    <div className="flex-1">{renderProject(project)}</div>
+                    <div className="">{renderProject(project)}</div>
 
                     {/* Separator */}
                     <hr className="border-t border-gray-300 my-4" />
 
                     {/* Common Text Area */}
-                    <div className="flex-1">
-                      <h4 className="text-xl font-medium mb-2">
+                    <div className="">
+                      <h4 className="md:text-xl font-medium mb-2">
                         {cardContent[cardContentIndex].title}
                       </h4>
                       <p className="text-sm text-gray-600">
@@ -186,7 +188,7 @@ export default function ReferenceParallaxGallery() {
 
                     {/* Project 2 */}
                     {index + 1 < projects.length && (
-                      <div className="flex-1">
+                      <div className="">
                         {renderProject(projects[index + 1])}
                       </div>
                     )}
