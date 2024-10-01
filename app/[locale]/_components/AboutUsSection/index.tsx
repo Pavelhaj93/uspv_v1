@@ -22,7 +22,7 @@ export default function Page() {
       name: t("companies.SolarKit.title"),
       subtitle: t("companies.SolarKit.subtitle"),
       description: t("companies.SolarKit.description"),
-      visitUrl: "https://shop.solar-kit.eu/cs",
+      visitUrl: "https://solar-kit.hu/ ",
       visitText: "Visit Solar Kit",
     },
   ];
