@@ -50,13 +50,12 @@
     "subtitle": "A few words about our company",
     "companies": {
       "USPV": {
-        "subtitle": "WE ARE",
         "title": "USPV",
-        "description1": "The USPV group of companies, operating in the photovoltaic industry and other areas of renewable energy, has been well-established in both the Czech and international markets for a long time. It is owned by Czech entrepreneur Tomáš Korostenský.",
-        "description2": "In addition to photovoltaic power plants (FVE), the USPV group also owns a portfolio of connection points to FVE, to which it plans to connect further production facilities across the Czech Republic in the near future. The USPV group focuses on locations where FVE construction, in accordance with new legislation, can support the energy self-sufficiency of the Czech Republic and the independence of municipalities, enabling greater control and flexibility in energy policy for municipalities."
+        "description1": "The USPV group of companies, operating in the photovoltaic industry and other renewable energy sectors, has been well-established in both the Czech and international markets for a long time. It is owned by Czech entrepreneur Tomáš Korostenský. ",
+        "description2": "In addition to photovoltaic power plants (PVPP), the USPV group also owns a portfolio of connection points to PVPPs, to which it plans to connect additional production facilities across the Czech Republic in the near future. The USPV group focuses on locations where the construction of PVPPs, in line with new legislation, can support the energy self-sufficiency of the Czech Republic and the independence of municipalities, allowing them greater control and flexibility in energy policy."
       },
       "Ekotechnik": {
-        "subtitle": "IN PARTNERSHIP WITH",
+        "subtitle": "WE LEVERAGE THE EXPERIENCE GAINED IN COLLABORATION WITH",
         "title": "Ekotechnik Czech",
         "description": "Ekotechnik Czech s.r.o.. has been active in the Czech market since 1990 and specializes in the design, construction, and operation of solar power plants. It offers comprehensive services from the initial project design, obtaining all necessary permits, to the implementation and maintenance of photovoltaic systems. Thanks to its long-standing experience, it can tailor solutions that meet the specific needs of municipalities and smaller towns. It emphasizes energy needs analysis, providing comprehensive energy services for maximum benefits in the form of savings, quick service, and exceptional customer care. Ekotechnik Czech s.r.o. also offers environmentally friendly solutions."
       },
@@ -107,7 +106,7 @@
       },
       "card3": {
         "title": "Years Proven Track Record",
-        "text": "With over 1.2 GWp in solar power plant projects developed across multiple countries, the company has established a strong presence in the global renewable energy market."
+        "text": "With over 1.15 GWp in solar power plant projects developed across multiple countries, the company has established a strong presence in the global renewable energy market."
       }
     }
   },
