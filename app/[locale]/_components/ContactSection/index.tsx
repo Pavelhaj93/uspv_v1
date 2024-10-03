@@ -21,7 +21,7 @@ export default function ContactSection() {
       <section id="contactSection" className="h-full w-full p-5 pb-0 relative">
         {/* Background Image */}
         <motion.div
-          className="relative w-full rounded-t-3xl md:rounded-3xl h-[20vh] md:h-[55vh] max-h-[420px]"
+          className="relative w-full rounded-t-3xl md:rounded-3xl h-[20vh] md:h-[55vh] max-h-[410px]"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ export default function ContactSection() {
 
         {/* Contact Card */}
         <motion.div
-          className="md:absolute md:h-[calc(100%_-_80px)] w-full md:w-[40%] xl:left-[23%] lg:max-w-[290px] md:left-[15%] left-5 top-0 md:top-12 bg-white/90 shadow-lg md:rounded-3xl rounded-b-3xl py-7 px-5 md:mt-0"
+          className="md:absolute md:h-[calc(100%_-_5rem)] w-full md:w-[40%] xl:left-[23%] lg:max-w-[18.125rem] md:left-[15%] left-5 top-0 md:top-12 bg-white/90 shadow-lg md:rounded-3xl rounded-b-3xl py-7 px-5 md:mt-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
