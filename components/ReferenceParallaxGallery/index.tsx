@@ -121,14 +121,15 @@ export default function ReferenceParallaxGallery() {
           </h3>
           <span className="scale-[70%]">{project.icon}</span>
         </div>
-        <p className="text-sm text-gray-600">{project.years}</p>
       </div>
 
       <div className="flex flex-col gap-2 md:gap-5">
         <span className="text-2xl xl:text-5xl 2xl:text-6xl font-medium">
           {project.developed} MWp
         </span>
-        <p className="text-sm text-gray-600">{project.note}</p>
+        <p className="text-sm text-gray-600">
+          {project.years} / {project.note}
+        </p>
       </div>
     </div>
   );
@@ -151,7 +152,7 @@ export default function ReferenceParallaxGallery() {
             >
               <div className="w-full h-full flex flex-col md:flex-row">
                 {/* Image */}
-                <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_40px)] md:h-[calc(100%_-_20px)] ">
+                <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_2.5rem)] md:h-[calc(100%_-_1.25rem)] ">
                   <Image
                     src={project.image}
                     alt={`Project in ${project.country}`}
@@ -161,7 +162,7 @@ export default function ReferenceParallaxGallery() {
                 </div>
                 {/* Card */}
                 <div
-                  className={`absolute w-[calc(100%_-_40px)] max-h-[700px] md:w-2/3 lg:w-[29%] top-0 md:top-[100px] md:h-auto h-2/3 
+                  className={`absolute w-[calc(100%_-_2.5rem)] max-h-[43.75rem] md:w-2/3 lg:w-[29%] top-0 md:top-[6.25rem] md:h-auto h-2/3 
                     bg-white lg:opacity-90 px-0 md:px-10 xl:px-12 py-5 md:py-10 2xl:py-16 md:rounded-3xl xl:shadow-lg ${
                       index % 4 === 0 ? "md:right-24" : "md:left-14"
                     }`}
