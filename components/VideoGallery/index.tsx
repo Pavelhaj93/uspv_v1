@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-const videos = ["/videos/video_1.mov", "/videos/video_2.mov"];
+const videos = ["/videos/video_1_trimmed.mp4", "/videos/video_2_trimmed.mp4"];
 
 export default function VideoGallery() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
