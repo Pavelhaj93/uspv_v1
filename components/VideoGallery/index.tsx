@@ -52,16 +52,20 @@ export default function VideoGallery() {
           />
         </div>
       ))}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center">
         {videos.map((_, index) => (
           <button
             key={index}
-            className={`h-2 w-2 rounded-full transition-colors ${
-              index === currentVideoIndex ? "bg-white" : "bg-white/50"
-            }`}
+            className="size-6"
             onClick={() => setCurrentVideoIndex(index)}
             aria-label={`Go to video ${index + 1}`}
-          />
+          >
+            <div
+              className={`size-2 rounded-full transition-colors ${
+                index === currentVideoIndex ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>
