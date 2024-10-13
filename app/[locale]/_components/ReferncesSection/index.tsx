@@ -1,6 +1,5 @@
 "use client";
 
-import ParallaxGallery from "@/components/ReferenceParallaxGallery";
 import SectionTitle from "@/components/SectionTitle";
 import { useTranslations } from "next-intl";
 import { useRef, useEffect, useState } from "react";
