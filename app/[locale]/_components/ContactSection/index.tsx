@@ -16,12 +16,48 @@ export default function ContactSection() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.4 } },
   };
 
+  const ContactCard = ({ className }: { className?: string }) => {
+    return (
+      <motion.div
+        className={`md:relative md:bg-white/90 shadow-lg md:shadow-none rounded-b-3xl rounded-t-none md:rounded-t-3xl py-7 px-5 md:max-w-[18.125rem] md:ml-[20%] md:m-5 ${className}`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={cardVariants}
+      >
+        <div className="flex flex-col items-center">
+          <p className="font-semibold text-xl mb-5">USPV s.r.o.</p>
+          <div className="flex flex-col text-center gap-5">
+            <div className="flex flex-col">
+              <p className="font-semibold mb-1">Main Point Pankrác</p>
+              <p className="font-light">Milevská 2095/5</p>
+              <p className="font-light">140 00 Praha 4</p>
+              <p className="font-light">Czech Republic</p>
+              <p className="font-light">IČO: 12345678</p>
+              <p className="font-light">DIČ: CZ12345678</p>
+            </div>
+            <div className="flex flex-col">
+              <p className="font-semibold mb-[2px]">Tomáš Korostenský</p>
+              <p className="font-light">tomas.korostensky@ekotechnik.cz</p>
+              <p className="font-light">+420 777 207 801</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  };
+
   return (
     <>
-      <section id="contactSection" className="h-full w-full p-5 pb-0 relative">
+      {/* Desktop Version (Hidden on mobile) */}
+      <section
+        id="contactSectionDesktop"
+        className="md:flex md:flex-col w-full p-5 pb-0"
+      >
+        {/* Desktop */}
         {/* Background Image */}
         <motion.div
-          className="relative w-full rounded-t-3xl md:rounded-3xl h-[20vh] md:h-[55vh] max-h-[410px]"
+          className="w-full md:flex hidden relative rounded-3xl overflow-hidden"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -32,42 +68,37 @@ export default function ContactSection() {
             alt="Background"
             layout="fill"
             objectFit="cover"
-            className="rounded-t-3xl md:rounded-3xl"
           />
+          {/* Contact Card Overlay */}
+          <ContactCard className="" />
         </motion.div>
+        {/* Desktop */}
 
-        {/* Contact Card */}
+        {/* Mobile */}
+        {/* Background Image */}
         <motion.div
-          className="md:absolute md:h-[calc(100%_-_5rem)] w-full md:w-[40%] xl:left-[23%] lg:max-w-[18.125rem] md:left-[15%] left-5 top-0 md:top-12 bg-white/90 shadow-lg md:rounded-3xl rounded-b-3xl py-7 px-5 md:mt-0"
+          className="md:hidden w-full h-[30vh] relative rounded-t-3xl overflow-hidden"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={cardVariants}
+          variants={backgroundImageVariants}
         >
-          <div className="h-full flex flex-col items-center">
-            <p className="font-semibold text-xl mb-5">USPV s.r.o.</p>
-            <div className="flex flex-col text-center gap-5">
-              <div className="flex flex-col">
-                <p className="font-semibold mb-1">Main Point Pankrác</p>
-                <p className="font-light">Milevská 2095/5</p>
-                <p className="font-light">140 00 Praha 4</p>
-                <p className="font-light">Czech Republic</p>
-                <p className="font-light">IČO: 12345678</p>
-                <p className="font-light">DIČ: CZ12345678</p>
-              </div>
-              <div className="flex flex-col">
-                <p className="font-semibold mb-[2px]">Tomáš Korostenský</p>
-                <p className="font-light">tomas.korostensky@ekotechnik.cz</p>
-                <p className="font-light">+420 777 207 801</p>
-              </div>
-            </div>
-          </div>
+          <Image
+            src="/images/MainPoint_1.jpg"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+          />
         </motion.div>
+
+        {/* Contact Card Under the Image */}
+        <ContactCard className="md:hidden" />
       </section>
+      {/* Mobile */}
 
       <section
         id="footerSection"
-        className="w-full bg-white h-12 flex items-center justify-center"
+        className="w-full bg-transparent h-12 flex items-center justify-center"
       >
         <div className="text-center text-md font-light">© 2024 USPV s.r.o.</div>
       </section>

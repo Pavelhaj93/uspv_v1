@@ -26,22 +26,20 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex md:gap-4 gap-6">
       {/* Link component automatically handles locale-aware routing */}
       <button
-        className="text-2xl"
         aria-label={getEnglishAriaLabel(locale)}
         onClick={() => toggleLocale("en")}
       >
-        <EnglishFlagSVG className="size-6" />
+        <EnglishFlagSVG className="md:size-6 size-10" />
       </button>
 
       <button
-        className="text-2xl"
         aria-label={getCzechAriaLabel(locale)}
         onClick={() => toggleLocale("cs")}
       >
-        <CzechFlagSVG className="size-6" />
+        <CzechFlagSVG className="md:size-6 size-10" />
       </button>
     </div>
   );
