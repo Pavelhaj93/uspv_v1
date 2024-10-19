@@ -4,7 +4,7 @@
     "description": "USPV - Fotovoltaické elektrárny"
   },
   "navbar": {
-    "home": "domu",
+    "home": "Domů",
     "aboutUs": "O nás",
     "references": "Reference",
     "contact": "Kontakt",
@@ -13,11 +13,11 @@
   },
   "hero": {
     "title": "Zvolte zelenou cestu s obnovitelnou energií.",
-    "subtitle": "Vedeme revoluci v solární energii. 100% ekologické, 100% inovativní."
+    "subtitle": "Jsme součástí revoluce v solární energii. 100% ekologické, 100% inovativní."
   },
   "numbersSection": {
     "title": "V ČÍSLECH",
-    "subtitle": "Naše úspěchy ",
+    "subtitle": "Úspěchy naší podnikatelské skupiny",
     "cards": {
       "card1": {
         "title": "na trhu",
@@ -32,7 +32,7 @@
         "suffix": "+ mil. €"
       },
       "card4": {
-        "title": "instalovaného výkonu",
+        "title": "výkonu",
         "suffix": "+ MWp"
       },
       "card5": {
@@ -51,8 +51,8 @@
     "companies": {
       "USPV": {
         "title": "USPV",
-        "description1": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě etablována na českém i zahraničním trhu. Jejím vlastníkem je český podnikatel Tomáš Korostenský. ",
-        "description2": "Kromě fotovoltaických elektráren (FVE) Skupina USPV vlastní také portfolio přípojných bodů k FVE, ke kterým plánuje v blízké budoucnosti připojit další výrobny po celé ČR. Skupina USPV se zaměřuje na lokality, kde výstavba FVE může v souladu s novou legislativou podpořit energetickou soběstačnost ČR a nezávislost obcí, čímž umožní obcím větší kontrolu a flexibilitu v energetické politice."
+        "description1": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě etablována na českém i zahraničním trhu, známá pod firmou Ekotechnik. Jejím vlastníkem je český podnikatel Tomáš Korostenský. ",
+        "description2": "Kromě fotovoltaických elektráren (FVE) Skupina USPV vlastní také portfolio přípojných bodů k FVE, ke kterým plánuje v blízké budoucnosti připojit další výrobny po celé EU. Skupina USPV se zaměřuje na lokality, kde výstavba FVE může v souladu s novou legislativou podpořit energetickou soběstačnost EU a nezávislost obcí, čímž umožní obcím větší kontrolu a flexibilitu v energetické politice."
       },
       "Ekotechnik": {
         "subtitle": "STAVÍME NA ZÍSKANÝCH ZKUŠENOSTECH",
@@ -62,7 +62,7 @@
       "SolarKit": {
         "subtitle": "VE SPOLUPRÁCI S",
         "title": "Solar Kit",
-        "description": "Solar Kit Hungary je dynamická společnost se sídlem v Budapešti, specializující se na velkoobchodní distribuce fotovoltaických (PV) systémů. Založena v roce 2016, rychle expandovala nejen v Maďarsku, ale i do dalších evropských zemí. Nabízí komplexní solární řešení a distribuci PV produktů pro rezidenční, komerční i průmyslové účely. Díky partnerství se značkami jako Huawei, Deye a SolaX nabízí konkurenceschopné ceny a vysokou kvalitu. Společnost se pyšní technickou podporou, vzděláváním partnerů, rozsáhlým skladem a efektivní logistikou. S ročním obratem přes 17 milionů EUR a více než 4000 instalovanými systémy patří mezi významné hráče v solárním průmyslu."
+        "description": "Solar Kit Hungary je dynamická společnost se sídlem v Budapešti, specializující se na velkoobchodní distribuce fotovoltaických (PV) systémů. Založena v roce 2016, rychle expandovala nejen v Maďarsku, ale i do dalších evropských zemí. Nabízí komplexní solární řešení a distribuci PV produktů pro rezidenční, komerční i průmyslové účely. Díky partnerství se značkami jako Huawei, Deye a SolaX nabízí konkurenceschopné ceny a vysokou kvalitu. Společnost se pyšní technickou podporou, vzděláváním partnerů, rozsáhlým skladem a efektivní logistikou."
       }
     }
   },
@@ -71,42 +71,55 @@
     "subtitle": "Projekty, na které jsme hrdí",
     "projects": {
       "project1": {
-        "country": "Česká republika",
-        "note": "vývoj a výstavba"
+        "country": "Česká Republika",
+        "note": "Development přípojných bodů"
       },
       "project2": {
-        "country": "Spojené království",
-        "note": "vývoj a výstavba"
+        "country": "Česká Republika",
+        "note": "Development, výstavba a investice"
       },
       "project3": {
         "country": "Rumunsko",
-        "note": "vývoj a výstavba"
+        "note": "Development, výstavba a investice"
       },
       "project4": {
         "country": "Ukrajina",
-        "note": "vývoj a výstavba / EPC"
+        "note": "Development, výstavba a investice"
       },
       "project5": {
-        "country": "Turecko",
-        "note": "vývojový poradce"
+        "country": "Spojené Království",
+        "note": "Projekce a development"
       },
       "project6": {
         "country": "Kazachstán",
-        "note": "dodání návrhu a inženýring fotovoltaických elektráren"
+        "note": "Dodání návrhu a inženýring fotovoltaických elektráren"
+      },
+      "project7": {
+        "country": "Turecko",
+        "note": "Dodání návrhu a inženýring fotovoltaických elektráren"
+      },
+      "project8": {
+        "country": "Indie",
+        "note": "Výroba konstrukcí pro fotovoltaické elektrárny",
+        "developed": "Výrobní závod"
       }
     },
     "cardContent": {
       "card1": {
-        "title": "Budování vedoucího portfolia solární energie v České republice",
-        "text": "Společnost se zaměřila na vývoj portfolia fotovoltaických elektráren v České republice, aby reagovala na vysokou poptávku po obnovitelné energii a přizpůsobila se rozvoji energetického trhu."
+        "title": "Budování portfolia v ČR",
+        "text": "Společnost se zaměřila na vývoj portfolia fotovoltaických elektráren v České republice. V současné chvíli provozujeme 7 MWp a vlastníme portofilo přípojných bodů, ke kterým plánujeme připojit další výrobní zařízení po celé ČR."
       },
       "card2": {
-        "title": "Skupina aktuálně vlastní a provozuje PV o výkonu 33MWp",
-        "text": "V České republice bylo vyvinuto celkem 7 MWp, následováno 6 MWp v Rumunsku. Dále byl dokončen projekt o výkonu 20 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
+        "title": "Budování portfolia v zahraničí",
+        "text": "V Rumunsku bylo vyvinuto 36 MWp. Dále byl dokončen projekt o výkonu 280 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
       },
       "card3": {
         "title": "let osvědčených zkušeností",
         "text": "S více než 1,15 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
+      },
+      "card4": {
+        "title": "Od návrhu po realizaci",
+        "text": "Naše společnost se specializuje nejen na vývoj fotovoltaických elektráren, ale také na dodání konstrukcí a zajištění samotné výstavby. Díky naším odborným znalostem a zkušenostem jsme schopni komplexně pokrýt všechny fáze realizace projektu."
       }
     }
   },

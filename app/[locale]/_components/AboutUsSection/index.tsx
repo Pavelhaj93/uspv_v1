@@ -49,7 +49,7 @@ export default function Page() {
             <h3 className="text-3xl lg:text-5xl font-medium tracking-tighter mb-5">
               {t("companies.USPV.title")}
             </h3>
-            <p className="lg:text-lg font-light">
+            <p className="lg:text-lg font-light mb-2">
               {t("companies.USPV.description1")}
             </p>
             <p className="lg:text-lg font-light">
