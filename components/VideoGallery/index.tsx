@@ -56,7 +56,7 @@ export default function VideoGallery() {
         {videos.map((_, index) => (
           <button
             key={index}
-            className="size-6"
+            className="size-6 items-center justify-center flex"
             onClick={() => setCurrentVideoIndex(index)}
             aria-label={`Go to video ${index + 1}`}
           >

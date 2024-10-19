@@ -12,6 +12,7 @@ import TurkeyFlagSVG from "@/app/[locale]/icons/TurkeyFlagSVG";
 import KazakhstanFlagSVG from "@/app/[locale]/icons/KazakhstanFlagSVG";
 import CzechFlagSVG from "@/components/LangSwitcher/CzechFlagSVG";
 import EnglishFlagSVG from "@/components/LangSwitcher/EnglishFlagSVG";
+import IndianFlagSVG from "@/app/[locale]/icons/IndianFlagSVG";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,16 +23,16 @@ const CompanySection = () => {
     {
       country: t("projects.project1.country"),
       icon: <CzechFlagSVG />,
-      years: "2006-10",
-      developed: 7,
+      years: "2022-současnost",
+      developed: "300 MWp+",
       image: "/images/cards/card_4.jpg",
       note: t("projects.project1.note"),
     },
     {
       country: t("projects.project2.country"),
-      icon: <EnglishFlagSVG />,
-      years: "2014-16",
-      developed: 90,
+      icon: <CzechFlagSVG />,
+      years: "2006-10",
+      developed: "7 MWp",
       image: "",
       note: t("projects.project2.note"),
     },
@@ -39,7 +40,7 @@ const CompanySection = () => {
       country: t("projects.project3.country"),
       icon: <RomaniaFlagSVG />,
       years: "2013-17",
-      developed: 30 + 6,
+      developed: "36 MWp",
       image: "/images/cards/card_1.jpg",
       note: t("projects.project3.note"),
     },
@@ -47,15 +48,15 @@ const CompanySection = () => {
       country: t("projects.project4.country"),
       icon: <UkraineFlagSVG />,
       years: "2012-22",
-      developed: 200 + 80,
+      developed: "280 MWp",
       image: "",
       note: t("projects.project4.note"),
     },
     {
       country: t("projects.project5.country"),
-      icon: <TurkeyFlagSVG />,
-      years: "",
-      developed: 20,
+      icon: <EnglishFlagSVG />,
+      years: "2014-16",
+      developed: "90 MWp",
       image: "/images/cards/card_9.jpg",
       note: t("projects.project5.note"),
     },
@@ -63,9 +64,25 @@ const CompanySection = () => {
       country: t("projects.project6.country"),
       icon: <KazakhstanFlagSVG />,
       years: "",
-      developed: 100,
+      developed: "100 MWp",
       image: "",
       note: t("projects.project6.note"),
+    },
+    {
+      country: t("projects.project5.country"),
+      icon: <TurkeyFlagSVG />,
+      years: "",
+      developed: "20 MWp",
+      image: "/images/cards/card_9.jpg",
+      note: t("projects.project5.note"),
+    },
+    {
+      country: t("projects.project8.country"),
+      icon: <IndianFlagSVG />,
+      years: "",
+      developed: t("projects.project8.developed"),
+      image: "",
+      note: t("projects.project8.note"),
     },
   ];
 
@@ -83,6 +100,10 @@ const CompanySection = () => {
         "cardContent.card3.title"
       )}`,
       text: t("cardContent.card3.text"),
+    },
+    {
+      title: t("cardContent.card4.title"),
+      text: t("cardContent.card4.text"),
     },
   ];
 
@@ -126,10 +147,10 @@ const CompanySection = () => {
 
       <div className="flex flex-col gap-2 md:gap-5">
         <span className="text-2xl xl:text-5xl 2xl:text-6xl font-medium">
-          {project.developed} MWp
+          {project.developed}
         </span>
         <p className="text-sm text-gray-600">
-          {project.years} / {project.note}
+          {project.years} {project.years && "/"} {project.note}
         </p>
       </div>
     </div>

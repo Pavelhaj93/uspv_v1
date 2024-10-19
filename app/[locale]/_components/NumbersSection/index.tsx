@@ -33,7 +33,7 @@ export default function AboutUsSectionWithNumbers() {
     {
       title: t("cards.card2.title"),
       start: 20,
-      end: 60,
+      end: 120,
       suffix: t("cards.card2.suffix"),
       duration: 3.5,
     },
