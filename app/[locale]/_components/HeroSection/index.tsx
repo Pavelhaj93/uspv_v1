@@ -1,6 +1,6 @@
-import AnimatedText from "@/components/AnimatedHeroBannerText";
+import AnimatedText from "@/app/[locale]/_components/HeroSection/AnimatedHeroBannerText";
 import React from "react";
-import VideoGallery from "@/components/VideoGallery";
+import VideoGallery from "@/app/[locale]/_components/HeroSection/VideoGallery";
 
 const HeroSection = () => {
   return (
