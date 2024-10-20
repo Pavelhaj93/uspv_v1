@@ -1,11 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import CzechFlagSVG from "./CzechFlagSVG";
-import EnglishFlagSVG from "./EnglishFlagSVG";
 import { useLocale } from "next-intl";
+import { IconCzechFlag, IconEnglishFlag } from "@/app/[locale]/icons";
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({ mobile }: { mobile?: boolean }) {
   const router = useRouter();
 
   const toggleLocale = (newLocale: string) => {
@@ -32,14 +31,14 @@ export default function LanguageSwitcher() {
         aria-label={getEnglishAriaLabel(locale)}
         onClick={() => toggleLocale("en")}
       >
-        <EnglishFlagSVG className="md:size-6 size-10" />
+        <IconEnglishFlag size={mobile ? "lg" : "sm"} />
       </button>
 
       <button
         aria-label={getCzechAriaLabel(locale)}
         onClick={() => toggleLocale("cs")}
       >
-        <CzechFlagSVG className="md:size-6 size-10" />
+        <IconCzechFlag size={mobile ? "lg" : "sm"} />
       </button>
     </div>
   );

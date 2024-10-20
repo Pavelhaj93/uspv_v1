@@ -38,7 +38,7 @@ const BurgerMenu: FC<BurgerMenuProps> = ({ links, setIsOpen }) => {
             
         </ul>
       </motion.nav>
-      <LanguageSwitcher />
+      <LanguageSwitcher mobile />
     </div>
   );
 };
