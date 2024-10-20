@@ -4,7 +4,6 @@ import SectionTitle from "@/components/SectionTitle";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import useScrollTrigger from "../../hooks/UseScrollTrigger";
-import ProjectCard from "./ProjectCardComponent";
 import {
   IconCzechFlag,
   IconEnglishFlag,
@@ -14,6 +13,7 @@ import {
   IconTurkeyFlag,
   IconUkraineFlag,
 } from "../../icons";
+import ParallaxSlide from "./ParallaxSlide";
 
 const CompanySection = () => {
   const t = useTranslations("referencesSection");
@@ -123,11 +123,11 @@ const CompanySection = () => {
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
       <div className="mb-10">
         {cards.map((card, index) => (
-          <ProjectCard
+          <ParallaxSlide
             key={index}
             image={card.image}
-            project={card.projects[0]}
-            nextProject={card.projects[1]}
+            firstProject={card.projects[0]}
+            secondProject={card.projects[1]}
             cardContent={card.cardContent}
             isLeftAligned={index % 2 === 0}
             activeIndex={activeIndex}
