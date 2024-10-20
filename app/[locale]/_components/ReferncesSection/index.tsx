@@ -2,19 +2,18 @@
 
 import SectionTitle from "@/components/SectionTitle";
 import { useTranslations } from "next-intl";
-import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import RomaniaFlagSVG from "@/app/[locale]/icons/RomaniaFlagSVG";
-import UkraineFlagSVG from "@/app/[locale]/icons/UkraineFlagSVG";
-import TurkeyFlagSVG from "@/app/[locale]/icons/TurkeyFlagSVG";
-import KazakhstanFlagSVG from "@/app/[locale]/icons/KazakhstanFlagSVG";
-import CzechFlagSVG from "@/components/LangSwitcher/CzechFlagSVG";
-import EnglishFlagSVG from "@/components/LangSwitcher/EnglishFlagSVG";
-import IndianFlagSVG from "@/app/[locale]/icons/IndianFlagSVG";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState } from "react";
+import useScrollTrigger from "../../hooks/UseScrollTrigger";
+import ProjectCard from "./ProjectCardComponent";
+import {
+  IconCzechFlag,
+  IconEnglishFlag,
+  IconIndianFlag,
+  IconKazakhstanFlag,
+  IconRomaniaFlag,
+  IconTurkeyFlag,
+  IconUkraineFlag,
+} from "../../icons";
 
 const CompanySection = () => {
   const t = useTranslations("referencesSection");
@@ -22,7 +21,7 @@ const CompanySection = () => {
   const projects = [
     {
       country: t("projects.project1.country"),
-      icon: <CzechFlagSVG />,
+      icon: <IconCzechFlag />,
       years: "2022-současnost",
       developed: "300 MWp+",
       image: "/images/cards/card_4.jpg",
@@ -30,7 +29,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project2.country"),
-      icon: <CzechFlagSVG />,
+      icon: <IconCzechFlag />,
       years: "2006-10",
       developed: "7 MWp",
       image: "",
@@ -38,7 +37,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project3.country"),
-      icon: <RomaniaFlagSVG />,
+      icon: <IconRomaniaFlag />,
       years: "2013-17",
       developed: "36 MWp",
       image: "/images/cards/card_1.jpg",
@@ -46,7 +45,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project4.country"),
-      icon: <UkraineFlagSVG />,
+      icon: <IconUkraineFlag />,
       years: "2012-22",
       developed: "280 MWp",
       image: "",
@@ -54,7 +53,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project5.country"),
-      icon: <EnglishFlagSVG />,
+      icon: <IconEnglishFlag />,
       years: "2014-16",
       developed: "90 MWp",
       image: "/images/cards/card_9.jpg",
@@ -62,7 +61,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project6.country"),
-      icon: <KazakhstanFlagSVG />,
+      icon: <IconKazakhstanFlag />,
       years: "",
       developed: "100 MWp",
       image: "",
@@ -70,7 +69,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project5.country"),
-      icon: <TurkeyFlagSVG />,
+      icon: <IconTurkeyFlag />,
       years: "",
       developed: "20 MWp",
       image: "/images/cards/card_9.jpg",
@@ -78,7 +77,7 @@ const CompanySection = () => {
     },
     {
       country: t("projects.project8.country"),
-      icon: <IndianFlagSVG />,
+      icon: <IconIndianFlag />,
       years: "",
       developed: t("projects.project8.developed"),
       image: "",
@@ -107,121 +106,27 @@ const CompanySection = () => {
     },
   ];
 
-  const ref = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  useScrollTrigger(setActiveIndex);
 
-  useEffect(() => {
-    const sections = gsap.utils.toArray(".gallery-section");
-
-    sections.forEach((section: any, i) => {
-      if (i !== sections.length - 1) {
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top top",
-          pin: true,
-          pinSpacing: false,
-          markers: false,
-          scrub: true,
-          end: "bottom top",
-          onEnter: () => setActiveIndex(i),
-          onLeaveBack: () => setActiveIndex(i - 1),
-        });
-      }
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
-  const renderProject = (project: any) => (
-    <div className="flex flex-col h-full justify-between gap-2 md:gap-4">
-      <div className="flex flex-col">
-        <div className="flex items-center gap-2">
-          <h3 className="md:text-xl font-medium uppercase">
-            {project.country}
-          </h3>
-          <span className="scale-[70%]">{project.icon}</span>
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-2 md:gap-5">
-        <span className="text-2xl xl:text-5xl 2xl:text-6xl font-medium">
-          {project.developed}
-        </span>
-        <p className="text-sm text-gray-600">
-          {project.years} {project.years && "/"} {project.note}
-        </p>
-      </div>
-    </div>
-  );
   return (
     <section id="referencesSection" className="w-screen h-full p-5">
-      {/* Your content goes here */}
       <SectionTitle title={t("title")} subtitle={t("subtitle")} />
-      {/* <ReferencesCarousel /> */}
-      <div className="mb-10" ref={ref}>
+      <div className="mb-10">
         {projects.reduce((acc: JSX.Element[], project, index) => {
           if (index % 2 === 0) {
+            const nextProject = projects[index + 1];
             const cardContentIndex = Math.floor(index / 2) % cardContent.length;
             acc.push(
-              <section
+              <ProjectCard
                 key={index}
-                className={`gallery-section h-screen w-screen relative ${
-                  (activeIndex === 1 && index === 0) ||
-                  (activeIndex === 2 && index === 0) ||
-                  (activeIndex === 2 && index === 2)
-                    ? "opacity-0"
-                    : "opacity-100"
-                }`}
-              >
-                <div className="w-full h-full flex flex-col md:flex-row">
-                  {/* Image */}
-                  <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_2.5rem)] md:h-[calc(100%_-_2.5rem)] ">
-                    <Image
-                      src={project.image}
-                      alt={`Project in ${project.country}`}
-                      layout="fill"
-                      className="md:rounded-3xl rounded-b-3xl object-cover"
-                    />
-                  </div>
-                  {/* Card */}
-                  <div
-                    className={`absolute w-[calc(100%_-_2.5rem)] max-h-[43.75rem] md:w-2/3 lg:w-[29%] top-0 md:top-[50%] md:-translate-y-1/2 md:h-auto h-2/3 
-                    bg-white lg:opacity-90 px-0 md:px-10 xl:px-12 py-5 md:py-10 2xl:py-16 md:rounded-3xl xl:shadow-lg ${
-                      index % 4 === 0 ? "md:right-24" : "md:left-14"
-                    }`}
-                  >
-                    <div className="flex flex-col h-full">
-                      {/* Project 1 */}
-                      <div className="">{renderProject(project)}</div>
-
-                      {/* Separator */}
-                      <hr className="border-t border-gray-300 my-4" />
-
-                      {/* Common Text Area */}
-                      <div className="">
-                        <h4 className="md:text-xl font-medium mb-2 uppercase">
-                          {cardContent[cardContentIndex].title}
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          {cardContent[cardContentIndex].text}
-                        </p>
-                      </div>
-
-                      {/* Separator */}
-                      <hr className="border-t border-gray-300 my-4" />
-
-                      {/* Project 2 */}
-                      {index + 1 < projects.length && (
-                        <div className="">
-                          {renderProject(projects[index + 1])}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </section>
+                project={project}
+                nextProject={nextProject}
+                cardContent={cardContent[cardContentIndex]}
+                isLeftAligned={index % 4 === 0}
+                activeIndex={activeIndex}
+                index={index}
+              />
             );
           }
           return acc;

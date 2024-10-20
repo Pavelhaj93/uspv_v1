@@ -84,7 +84,7 @@ export default function ContactSection() {
           variants={backgroundImageVariants}
         >
           <Image
-            src="/images/MainPoint_1.jpg"
+            src="/images/MainPoint_3.jpg"
             alt="Background"
             layout="fill"
             objectFit="cover"

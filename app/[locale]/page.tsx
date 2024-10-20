@@ -5,7 +5,6 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import ContactSection from "./_components/ContactSection";
-import SeparatorSection from "./_components/SeparatorSection";
 import PartnersSection from "./_components/PartnersSection";
 import NumbersSection from "./_components/NumbersSection";
 
