@@ -32,7 +32,7 @@ const ParallaxSlide = ({
 }: ParallaxSlideProps) => {
   return (
     <section
-      className={`gallery-section h-screen w-screen relative opacity-100 ${
+      className={`gallery-section h-screen w-screen relative ${
         (activeIndex === 1 && index === 0) ||
         (activeIndex === 2 && index === 0) ||
         (activeIndex === 2 && index === 2)

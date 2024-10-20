@@ -20,6 +20,7 @@ const CompanySection = () => {
 
   const cards = [
     {
+      id: 1,
       image: "/images/cards/card_4.jpg",
       projects: [
         {
@@ -43,6 +44,7 @@ const CompanySection = () => {
       },
     },
     {
+      id: 2,
       image: "/images/cards/card_1.jpg",
       projects: [
         {
@@ -66,6 +68,7 @@ const CompanySection = () => {
       },
     },
     {
+      id: 3,
       image: "/images/cards/card_9.jpg",
       projects: [
         {
@@ -91,6 +94,7 @@ const CompanySection = () => {
       },
     },
     {
+      id: 4,
       image: "/images/cards/card_8.jpg",
       projects: [
         {
@@ -124,7 +128,7 @@ const CompanySection = () => {
       <div className="mb-10">
         {cards.map((card, index) => (
           <ParallaxSlide
-            key={index}
+            key={card.id}
             image={card.image}
             firstProject={card.projects[0]}
             secondProject={card.projects[1]}

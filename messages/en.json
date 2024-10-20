@@ -1,130 +1,130 @@
 {
-  "metadata": {
-    "title": "USPV - Photovoltaic power plants",
-    "description": "USPV - Photovoltaic power plants"
-  },
-  "navbar": {
-    "home": "Home",
-    "aboutUs": "About us",
-    "references": "Reference",
-    "contact": "Contact",
-    "switchToEnglish": "en",
-    "switchToCzech": "cs"
-  },
-  "hero": {
-    "title": "Go Green with the Force of Renewable Energy",
-    "subtitle": "We are part of the solar energy revolution. 100% ecological, 100% innovative."
-  },
-  "numbersSection": {
-    "title": "NUMBERS",
-    "subtitle": "Achievements of our business group",
-    "cards": {
-      "card1": {
-        "title": "in business",
-        "suffix": " years"
-      },
-      "card2": {
-        "title": "employees",
-        "suffix": "+"
-      },
-      "card3": {
-        "title": "portfolio",
-        "suffix": "+ mil. €"
-      },
-      "card4": {
-        "title": "capacity",
-        "suffix": "+ MWp"
-      },
-      "card5": {
-        "title": "turnover",
-        "suffix": "+ mil. €"
-      },
-      "card6": {
-        "title": "tons CO2 emissions avoided",
-        "suffix": "+ mil."
-      }
-    }
-  },
-  "aboutUsSection": {
-    "title": "ABOUT US",
-    "subtitle": "A few words about our company",
-    "companies": {
-      "USPV": {
-        "title": "USPV",
-        "description1": "The USPV Group of companies, operating in the photovoltaic industry and other renewable energy sectors, has been well-established in both the Czech and international markets for a long time, known under company Ekotechnik. It is owned by Czech entrepreneur Tomáš Korostenský. ",
-        "description2": "In addition to photovoltaic power plants (PVPP), the USPV Group also owns a portfolio of connection points to PVPPs, to which it plans to connect additional production facilities across the EU in the near future. The USPV group focuses on locations where the construction of PVPPs, in line with new legislation, can support the energy self-sufficiency of the EU and the independence of municipalities, allowing them greater control and flexibility in energy policy."
-      },
-      "Ekotechnik": {
-        "subtitle": "WE BUILD ON THE EXPERIENCE GAINED",
-        "title": "Ekotechnik Czech",
-        "description": "Ekotechnik Czech s.r.o.. has been active in the Czech market since 1990 and specializes in the design, construction, and operation of solar power plants. It offers comprehensive services from the initial project design, obtaining all necessary permits, to the implementation and maintenance of photovoltaic systems. Thanks to its long-standing experience, it can tailor solutions that meet the specific needs of municipalities and smaller towns. It emphasizes energy needs analysis, providing comprehensive energy services for maximum benefits in the form of savings, quick service, and exceptional customer care. Ekotechnik Czech s.r.o. also offers environmentally friendly solutions."
-      },
-      "SolarKit": {
-        "subtitle": "IN COLLABORATION WITH",
-        "title": "Solar Kit",
-        "description": "Solar Kit Hungary is a dynamic company based in Budapest, specializing in the wholesale distribution of photovoltaic (PV) systems. Founded in 2016, it quickly expanded not only in Hungary but also to other European countries. It offers comprehensive solar solutions and PV product distribution for residential, commercial, and industrial purposes. Through partnerships with brands such as Huawei, Deye, and SolaX, it offers competitive prices and high quality. The company prides itself on technical support, partner training, extensive warehousing, and efficient logistics."
-      }
-    }
-  },
-  "referencesSection": {
-    "title": "OUR REFERENCES",
-    "subtitle": "Projects we are proud of",
-    "projects": {
-      "project1": {
-        "country": "Czech Republic",
-        "note": "Development of connection points"
-      },
-      "project2": {
-        "country": "Czech Republic",
-        "note": "Development, EPC, and investment"
-      },
-      "project3": {
-        "country": "Romania",
-        "note": "Development, EPC, and investment"
-      },
-      "project4": {
-        "country": "Ukraine",
-        "note": "Development, EPC, and investment"
-      },
-      "project5": {
-        "country": "United Kingdom",
-        "note": "Design and development"
-      },
-      "project6": {
-        "country": "Kazakhstan",
-        "note": "Delivery of design and engineering for photovoltaic plants"
-      },
-      "project7": {
-        "country": "Turkey",
-        "note": "Delivery of design and engineering for photovoltaic plants"
-      },
-      "project8": {
-        "country": "India",
-        "note": "Manufacturing of structures for photovoltaic plants",
-        "developed": "Factory"
-      }
-    },
-    "cardContent": {
-      "card1": {
-        "title": "Building a Portfolio in the Czech Republic",
-        "text": "The company has focused on developing a portfolio of photovoltaic power plants in the Czech Republic. We currently operate 7 MWp and own a portfolio of connection points to which we plan to connect additional production facilities across the country."
-      },
-      "card2": {
-        "title": "Building a Portfolio Abroad",
-        "text": "In Romania, 36 MWp have been developed. Additionally, a 280 MWp project was completed in Ukraine, financed by the European Bank for Reconstruction and Development (EBRD)."
-      },
-      "card3": {
-        "title": "Years of Proven Experience",
-        "text": "With more than 1.15 GWp of photovoltaic power plant projects developed in several countries, the company holds a strong position in the global renewable energy market."
-      },
-      "card4": {
-        "title": "From Design to Completion",
-        "text": "Our company specializes not only in the development of photovoltaic power plants but also in delivering structures and ensuring the construction itself. Thanks to our expertise and experience, we can comprehensively cover all phases of project implementation."
-      }
-    }
-  },
-  "partnersSection": {
-    "title": "PARTNERS",
-    "subtitle": "Powering progress together"
-  }
+	"metadata": {
+		"title": "USPV - Photovoltaic power plants",
+		"description": "USPV - Photovoltaic power plants"
+	},
+	"navbar": {
+		"home": "Home",
+		"aboutUs": "About us",
+		"references": "Reference",
+		"contact": "Contact",
+		"switchToEnglish": "en",
+		"switchToCzech": "cs"
+	},
+	"hero": {
+		"title": "Go Green with the Force of Renewable Energy",
+		"subtitle": "We are part of the solar energy revolution. 100% ecological, 100% innovative."
+	},
+	"numbersSection": {
+		"title": "NUMBERS",
+		"subtitle": "Achievements of our business group",
+		"cards": {
+			"card1": {
+				"title": "in business",
+				"suffix": " years"
+			},
+			"card2": {
+				"title": "employees",
+				"suffix": "+"
+			},
+			"card3": {
+				"title": "portfolio",
+				"suffix": "+ mil. €"
+			},
+			"card4": {
+				"title": "capacity",
+				"suffix": "+ MWp"
+			},
+			"card5": {
+				"title": "turnover",
+				"suffix": "+ mil. €"
+			},
+			"card6": {
+				"title": "tons CO2 emissions avoided",
+				"suffix": "+ mil."
+			}
+		}
+	},
+	"aboutUsSection": {
+		"title": "ABOUT US",
+		"subtitle": "A few words about our company",
+		"companies": {
+			"USPV": {
+				"title": "USPV",
+				"description1": "The USPV Group of companies, operating in the photovoltaic industry and other renewable energy sectors, has been well-established in both the Czech and international markets for a long time, known under company Ekotechnik. It is owned by Czech entrepreneur Tomáš Korostenský. ",
+				"description2": "In addition to photovoltaic power plants (PVPP), the USPV Group also owns a portfolio of connection points to PVPPs, to which it plans to connect additional production facilities across the EU in the near future. The USPV group focuses on locations where the construction of PVPPs, in line with new legislation, can support the energy self-sufficiency of the EU and the independence of municipalities, allowing them greater control and flexibility in energy policy."
+			},
+			"Ekotechnik": {
+				"subtitle": "WE BUILD ON THE EXPERIENCE GAINED",
+				"title": "Ekotechnik Czech",
+				"description": "Ekotechnik Czech s.r.o.. has been active in the Czech market since 1990 and specializes in the design, construction, and operation of solar power plants. It offers comprehensive services from the initial project design, obtaining all necessary permits, to the implementation and maintenance of photovoltaic systems. Thanks to its long-standing experience, it can tailor solutions that meet the specific needs of municipalities and smaller towns. It emphasizes energy needs analysis, providing comprehensive energy services for maximum benefits in the form of savings, quick service, and exceptional customer care. Ekotechnik Czech s.r.o. also offers environmentally friendly solutions."
+			},
+			"SolarKit": {
+				"subtitle": "IN COLLABORATION WITH",
+				"title": "Solar Kit",
+				"description": "Solar Kit Hungary is a dynamic company based in Budapest, specializing in the wholesale distribution of photovoltaic (PV) systems. Founded in 2016, it quickly expanded not only in Hungary but also to other European countries. It offers comprehensive solar solutions and PV product distribution for residential, commercial, and industrial purposes. Through partnerships with brands such as Huawei, Deye, and SolaX, it offers competitive prices and high quality. The company prides itself on technical support, partner training, extensive warehousing, and efficient logistics."
+			}
+		}
+	},
+	"referencesSection": {
+		"title": "OUR REFERENCES",
+		"subtitle": "Projects we are proud of",
+		"projects": {
+			"project1": {
+				"country": "Czech Republic",
+				"note": "Development of connection points"
+			},
+			"project2": {
+				"country": "Czech Republic",
+				"note": "Development, EPC, and investment"
+			},
+			"project3": {
+				"country": "Romania",
+				"note": "Development, EPC, and investment"
+			},
+			"project4": {
+				"country": "Ukraine",
+				"note": "Development, EPC, and investment"
+			},
+			"project5": {
+				"country": "United Kingdom",
+				"note": "Design and development"
+			},
+			"project6": {
+				"country": "Kazakhstan",
+				"note": "Delivery of design and engineering for photovoltaic plants"
+			},
+			"project7": {
+				"country": "Turkey",
+				"note": "Delivery of design and engineering for photovoltaic plants"
+			},
+			"project8": {
+				"country": "India",
+				"note": "Manufacturing of structures for photovoltaic plants",
+				"developed": "Factory"
+			}
+		},
+		"cardContent": {
+			"card1": {
+				"title": "Building a Portfolio in the Czech Republic",
+				"text": "The company has focused on developing a portfolio of photovoltaic power plants in the Czech Republic. We currently operate 7 MWp and own a portfolio of connection points to which we plan to connect additional production facilities across the country."
+			},
+			"card2": {
+				"title": "Building a Portfolio Abroad",
+				"text": "In Romania, 36 MWp have been developed. Additionally, a 280 MWp project was completed in Ukraine, financed by the European Bank for Reconstruction and Development (EBRD)."
+			},
+			"card3": {
+				"title": "Years of Proven Experience",
+				"text": "With more than 1.15 GWp of photovoltaic power plant projects developed in several countries, the company holds a strong position in the global renewable energy market."
+			},
+			"card4": {
+				"title": "From Design to Completion",
+				"text": "Our company specializes not only in the development of photovoltaic power plants but also in delivering structures and ensuring the construction itself. Thanks to our expertise and experience, we can comprehensively cover all phases of project implementation."
+			}
+		}
+	},
+	"partnersSection": {
+		"title": "PARTNERS",
+		"subtitle": "Powering progress together"
+	}
 }
