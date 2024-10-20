@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority";
 
 import IndianFlagSVG from "./svg/IndianFlag.svg";
 import KazakhstanFlagSVG from "./svg/KazakhstanFlag.svg";
@@ -7,13 +8,14 @@ import TurkeyFlagSVG from "./svg/TurkeyFlag.svg";
 import UkraineFlagSVG from "./svg/UkraineFlag.svg";
 import EnglishFlagSVG from "./svg/EnglishFlag.svg";
 import CzechFlagSVG from "./svg/CzechFlag.svg";
-import { cva, VariantProps } from "class-variance-authority";
+import LogoSVG from "./svg/Logo.svg";
 
 const iconVariants = cva("", {
   variants: {
     size: {
       sm: "size-6",
       lg: "size-10",
+      logo: "size-32",
     },
   },
   defaultVariants: {
@@ -47,3 +49,4 @@ export const IconTurkeyFlag = withStyles(TurkeyFlagSVG);
 export const IconUkraineFlag = withStyles(UkraineFlagSVG);
 export const IconEnglishFlag = withStyles(EnglishFlagSVG);
 export const IconCzechFlag = withStyles(CzechFlagSVG);
+export const IconLogo = withStyles(LogoSVG);

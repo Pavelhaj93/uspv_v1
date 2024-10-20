@@ -6,7 +6,7 @@ import BurgerMenu from "../BurgerMenu";
 import { Fade as Hamburger } from "hamburger-react";
 import LanguageSwitcher from "../LangSwitcher";
 import { useTranslations } from "next-intl";
-import LogoSVG from "./LogoSVG";
+import { IconLogo } from "@/app/[locale]/icons";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -97,8 +97,11 @@ const Navbar = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <LogoSVG color={isHovered ? "#72b28f" : "#000000"} />
-
+          <IconLogo
+            size="logo"
+            fill={isHovered ? "#72b28f" : "#000000"}
+            className="transition-colors duration-200 ease-in-out"
+          />
           <span className="sr-only">
             USPV company - solar power and energy independence
           </span>

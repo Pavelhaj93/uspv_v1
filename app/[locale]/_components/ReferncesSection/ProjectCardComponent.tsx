@@ -8,11 +8,11 @@ interface Project {
   icon: JSX.Element;
   years: string;
   developed: string;
-  image: string;
   note: string;
 }
 
 interface ProjectCardProps {
+  image: string;
   project: Project;
   nextProject?: Project;
   cardContent: { title: string; text: string };
@@ -22,6 +22,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
+  image,
   project,
   nextProject,
   cardContent,
@@ -42,9 +43,9 @@ const ProjectCard = ({
       <div className="w-full h-full flex flex-col md:flex-row">
         {/* Image */}
         <div className="relative h-1/3 top-2/3 md:top-5 -order-last w-[calc(100%_-_2.5rem)] md:h-[calc(100%_-_2.5rem)]">
-          {project.image && (
+          {image && (
             <Image
-              src={project.image}
+              src={image}
               alt={`Project in ${project.country}`}
               layout="fill"
               className="md:rounded-3xl rounded-b-3xl object-cover"
