@@ -5,41 +5,42 @@ import CzechFlagSVG from "./svg/CzechFlag.svg";
 import EnglishFlagSVG from "./svg/EnglishFlag.svg";
 import IndianFlagSVG from "./svg/IndianFlag.svg";
 import KazakhstanFlagSVG from "./svg/KazakhstanFlag.svg";
+import LogoSideSVG from "./svg/LogoSide.svg";
 import LogoSVG from "./svg/Logo.svg";
 import RomaniaFlagSVG from "./svg/RomaniaFlag.svg";
 import TurkeyFlagSVG from "./svg/TurkeyFlag.svg";
 import UkraineFlagSVG from "./svg/UkraineFlag.svg";
 
 const iconVariants = cva("", {
-	variants: {
-		size: {
-			sm: "size-6",
-			lg: "size-10",
-			logo: "size-32",
-		},
-	},
-	defaultVariants: {
-		size: "sm",
-	},
+  variants: {
+    size: {
+      sm: "size-6",
+      lg: "size-10",
+      custom: "",
+    },
+  },
+  defaultVariants: {
+    size: "sm",
+  },
 });
 
 export type IconComponent = React.FC<
-	React.SVGProps<SVGSVGElement> & VariantProps<typeof iconVariants>
+  React.SVGProps<SVGSVGElement> & VariantProps<typeof iconVariants>
 >;
 
 function withStyles(
-	Icon: React.FC<React.SVGProps<SVGSVGElement>>,
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>
 ): IconComponent {
-	const render: IconComponent = ({ className, size, ...props }) => (
-		<Icon
-			aria-hidden
-			{...props}
-			className={cn(iconVariants({ size, className }))}
-		/>
-	);
-	render.displayName = "Icon";
+  const render: IconComponent = ({ className, size, ...props }) => (
+    <Icon
+      aria-hidden
+      {...props}
+      className={cn(iconVariants({ size, className }))}
+    />
+  );
+  render.displayName = "Icon";
 
-	return render;
+  return render;
 }
 
 export const IconIndianFlag = withStyles(IndianFlagSVG);
@@ -49,4 +50,5 @@ export const IconTurkeyFlag = withStyles(TurkeyFlagSVG);
 export const IconUkraineFlag = withStyles(UkraineFlagSVG);
 export const IconEnglishFlag = withStyles(EnglishFlagSVG);
 export const IconCzechFlag = withStyles(CzechFlagSVG);
+export const IconLogoSide = withStyles(LogoSideSVG);
 export const IconLogo = withStyles(LogoSVG);
