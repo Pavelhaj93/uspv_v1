@@ -25,11 +25,12 @@ export default function ContactSection() {
         whileInView="visible"
         viewport={{ once: true }}
         variants={cardVariants}
+        id="contactSection"
       >
         <div className="flex flex-col items-center">
-          <IconLogo size="custom" className="mb-5 h-10" />
+          <IconLogo size="custom" className="mb-5 h-12" />
           <div className="flex flex-col text-center gap-5">
-            <div className="text-[#281e57] flex flex-col">
+            <div className="text-primary flex flex-col">
               <p className="font-semibold mb-1">Main Point Pankrác</p>
               <p className="font-light">Milevská 2095/5</p>
               <p className="font-light">140 00 Praha 4</p>
@@ -37,8 +38,8 @@ export default function ContactSection() {
               <p className="font-light">IČO: 12345678</p>
               <p className="font-light">DIČ: CZ12345678</p>
             </div>
-            <div className="text-[#281e57] flex flex-col">
-              <p className="font-semibold mb-[2px]">Tomáš Korostenský</p>
+            <div className="text-primary flex flex-col">
+              <p className="font-semibold mb-0.5">Tomáš Korostenský</p>
               <p className="font-light">tomas.korostensky@ekotechnik.cz</p>
               <p className="font-light">+420 777 207 801</p>
             </div>
