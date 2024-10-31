@@ -113,7 +113,7 @@ const Navbar = () => {
                   <Link
                     href={link.href}
                     className={
-                      "uppercase hover:text-[#110546] mt-4 transition duration-300 ease-in-out font-light text-black"
+                      "uppercase hover:text-[#2495b9] mt-4 transition-colors font-light text-[#281e57]"
                     }
                     prefetch={false}
                   >
