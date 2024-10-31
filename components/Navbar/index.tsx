@@ -99,7 +99,7 @@ const Navbar = () => {
         >
           <IconLogoSide
             size="custom"
-            className="md:h-12 sm:h-12 h-10 hover:opacity-80 transition-opacity"
+            className="md:h-11 sm:h-10 h-9 hover:opacity-80 transition-opacity"
           />
           <span className="sr-only">
             USPV company - solar power and energy independence
@@ -112,12 +112,11 @@ const Navbar = () => {
                 <li key={link.id}>
                   <Link
                     href={link.href}
-                    className={
-                      "uppercase hover:text-[#2495b9] mt-4 transition-colors font-light text-[#281e57]"
-                    }
+                    className="uppercase group hover:text-secondary mt-4 transition-colors font-normal text-primary"
                     prefetch={false}
                   >
                     {link.name}
+                    <span className="block max-w-full scale-x-0 group-hover:scale-x-100 duration-300 transition-transform h-0.5 bg-sky-600 origin-center"></span>
                   </Link>
                 </li>
               ))}
