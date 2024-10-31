@@ -12,7 +12,6 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   const t = useTranslations("navbar");
 
@@ -90,16 +89,10 @@ const Navbar = () => {
         className="relative mx-auto flex h-14 items-center justify-between px-4 lg:px-8"
         style={{ zIndex: 10 }}
       >
-        <Link
-          href="#"
-          className="flex items-center"
-          prefetch={false}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
+        <Link href="#" className="flex items-center" prefetch={false}>
           <IconLogoSide
             size="custom"
-            className="md:h-11 sm:h-10 h-9 hover:opacity-80 transition-opacity"
+            className="md:h-11 sm:h-10 h-9 hover:text-[#0289b9]"
           />
           <span className="sr-only">
             USPV company - solar power and energy independence
@@ -116,7 +109,7 @@ const Navbar = () => {
                     prefetch={false}
                   >
                     {link.name}
-                    <span className="block max-w-full scale-x-0 group-hover:scale-x-100 duration-300 transition-transform h-0.5 bg-sky-600 origin-center"></span>
+                    <span className="block max-w-full scale-x-0 group-hover:scale-x-100 duration-300 transition-transform h-[1px] bg-sky-600 origin-center"></span>
                   </Link>
                 </li>
               ))}
