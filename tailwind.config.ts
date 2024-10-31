@@ -20,8 +20,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        primary: "#281e57",
-        secondary: "#2495b9",
+        primary: "#302A63",
+        secondary: "#0289b9",
       },
       flexBasis: {
         "1/7": "14.2857143%",
