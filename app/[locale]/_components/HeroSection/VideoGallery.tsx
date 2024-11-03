@@ -7,12 +7,12 @@ import { useEffect, useRef, useState } from "react";
 const videos = [
   {
     id: 1,
-    src: "/videos/video_1_trimmed.mp4",
+    src: "/videos/video_1_45.mp4",
     thumbnail: "/images/thumbnails/video_1_thumbnail.jpg",
   },
   {
     id: 2,
-    src: "/videos/video_2_trimmed.mp4",
+    src: "/videos/video_2_45.mp4",
     thumbnail: "/images/thumbnails/video_2_thumbnail.jpg",
   },
 ];
@@ -73,6 +73,7 @@ export default function VideoGallery() {
               loop
               muted
               playsInline
+              autoPlay
               className="w-full h-full object-cover rounded-3xl"
               onLoadedData={() => {
                 // Ensure video plays automatically once it's loaded
