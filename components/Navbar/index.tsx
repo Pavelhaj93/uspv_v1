@@ -1,17 +1,18 @@
 "use client";
 
-import { IconLogoSide } from "@/app/[locale]/icons";
 import { Fade as Hamburger } from "hamburger-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import BurgerMenu from "../BurgerMenu";
 import LanguageSwitcher from "../LangSwitcher";
+import ReactLogo from "@/app/[locale]/icons/ReactLogo";
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const t = useTranslations("navbar");
 
@@ -90,9 +91,15 @@ const Navbar = () => {
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
-          <IconLogoSide
+          {/* <IconLogoSide
             size="custom"
             className="md:h-11 sm:h-10 h-9 hover:text-[#0289b9]"
+          /> */}
+          <ReactLogo
+            className="md:h-11 sm:h-10 h-9"
+            color={isHovered ? "#0289b9" : "#302A63"}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           />
           <span className="sr-only">
             USPV company - solar power and energy independence
