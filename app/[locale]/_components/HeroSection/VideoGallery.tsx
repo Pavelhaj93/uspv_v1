@@ -54,15 +54,13 @@ export default function VideoGallery() {
           }`}
         >
           {/* Show thumbnail immediately, load video only if it's the current one */}
-          {!video.src && (
-            <Image
-              src={video.thumbnail}
-              alt={`Thumbnail for video ${video.id}`}
-              className="w-full h-full object-cover rounded-3xl"
-              width={1920}
-              height={1080}
-            />
-          )}
+          <Image
+            src={video.thumbnail}
+            alt={`Thumbnail for video ${video.id}`}
+            className="w-full h-full inset-0 absolute object-cover rounded-3xl z-0"
+            width={1920}
+            height={1080}
+          />
           {/* Only load video for the current index */}
           {index === currentVideoIndex && (
             <video
@@ -73,13 +71,7 @@ export default function VideoGallery() {
               loop
               muted
               playsInline
-              autoPlay
-              className="w-full h-full object-cover rounded-3xl"
-              onLoadedData={() => {
-                // Ensure video plays automatically once it's loaded
-                const videoElement = videoRefs.current[index];
-                if (videoElement) videoElement.play();
-              }}
+              className="w-full h-full inset-0 absolute object-cover rounded-3xl"
             />
           )}
         </div>
