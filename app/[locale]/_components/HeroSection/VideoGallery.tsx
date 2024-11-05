@@ -71,6 +71,7 @@ export default function VideoGallery() {
               loop
               muted
               playsInline
+              autoPlay
               className="w-full h-full inset-0 absolute object-cover rounded-3xl"
             />
           )}
