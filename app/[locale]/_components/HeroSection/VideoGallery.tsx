@@ -53,14 +53,6 @@ export default function VideoGallery() {
             index === currentVideoIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Show thumbnail immediately, load video only if it's the current one */}
-          <Image
-            src={video.thumbnail}
-            alt={`Thumbnail for video ${video.id}`}
-            className="w-full h-full inset-0 absolute object-cover rounded-3xl z-0"
-            width={1920}
-            height={1080}
-          />
           {/* Only load video for the current index */}
           {index === currentVideoIndex && (
             <video
@@ -68,6 +60,7 @@ export default function VideoGallery() {
                 videoRefs.current[index] = el;
               }}
               src={video.src}
+              poster={video.thumbnail}
               loop
               muted
               playsInline
