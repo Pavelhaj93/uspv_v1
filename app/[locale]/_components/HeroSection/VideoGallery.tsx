@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 // Video data with thumbnails and source for adaptive quality
@@ -21,6 +20,7 @@ export default function VideoGallery() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
+  // Cycle through videos every 15 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
@@ -29,19 +29,16 @@ export default function VideoGallery() {
     return () => clearInterval(timer);
   }, []);
 
+  // Trigger video play on component mount or video index change
   useEffect(() => {
-    videoRefs.current.forEach((video, index) => {
-      if (video) {
-        if (index === currentVideoIndex) {
-          video.play();
-        } else {
-          video.pause();
-          setTimeout(() => {
-            video.currentTime = 0;
-          }, 1000);
-        }
-      }
-    });
+    const currentVideo = videoRefs.current[currentVideoIndex];
+    if (currentVideo) {
+      setTimeout(() => {
+        currentVideo.play().catch(() => {
+          // Autoplay restrictions will keep video paused; no overlay needed
+        });
+      }, 100); // Small delay to ensure the video is initialized
+    }
   }, [currentVideoIndex]);
 
   return (
