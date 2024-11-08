@@ -1,18 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-// Video data with thumbnails and source for adaptive quality
 const videos = [
   {
     id: 1,
-    src: "/videos/video_1_45.mp4",
+    src: "https://res.cloudinary.com/dxqnem4vn/video/upload/f_auto:video,q_auto/gxjhyhhjugv6iqfh38rj",
     thumbnail: "/images/thumbnails/video_1_thumbnail.jpg",
   },
   {
     id: 2,
-    src: "/videos/video_2_45.mp4",
+    src: "https://res.cloudinary.com/dxqnem4vn/video/upload/f_auto:video,q_auto/b3zbqaff4l8cjugfeiiq",
     thumbnail: "/images/thumbnails/video_2_thumbnail.jpg",
   },
 ];
@@ -36,9 +34,7 @@ export default function VideoGallery() {
           video.play();
         } else {
           video.pause();
-          setTimeout(() => {
-            video.currentTime = 0;
-          }, 1000);
+          video.currentTime = 0; // Reset immediately
         }
       }
     });
@@ -53,10 +49,9 @@ export default function VideoGallery() {
             index === currentVideoIndex ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Only load video for the current index */}
           {index === currentVideoIndex && (
             <video
-              ref={(el: HTMLVideoElement | null) => {
+              ref={(el) => {
                 videoRefs.current[index] = el;
               }}
               src={video.src}
