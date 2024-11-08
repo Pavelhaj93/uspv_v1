@@ -18,24 +18,23 @@ const Navbar = () => {
 
   const controlNavbar = useCallback(() => {
     if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setIsVisible(false);
-      } else {
-        // if scroll up show the navbar
+      const scrollY = window.scrollY;
+
+      // If scrolled less than or equal to 100px, always show navbar
+      if (scrollY <= 100) {
         setIsVisible(true);
+      } else {
+        // Show or hide based on scroll direction
+        setIsVisible(scrollY < lastScrollY);
       }
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
+      setLastScrollY(scrollY);
     }
   }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
-
-      // cleanup function
       return () => {
         window.removeEventListener("scroll", controlNavbar);
       };
@@ -51,28 +50,15 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [handleResize]);
 
   const links = [
-    {
-      id: 1,
-      name: t("aboutUs"),
-      href: "#aboutUsSection",
-    },
-    {
-      id: 2,
-      name: t("references"),
-      href: "#referencesSection",
-    },
-    {
-      id: 3,
-      name: t("contact"),
-      href: "#contactSection",
-    },
+    { id: 1, name: t("aboutUs"), href: "#aboutUsSection" },
+    { id: 2, name: t("references"), href: "#referencesSection" },
+    { id: 3, name: t("contact"), href: "#contactSection" },
   ];
 
   return (
@@ -81,7 +67,6 @@ const Navbar = () => {
         !isOpen && (isVisible ? "translate-y-0" : "-translate-y-full")
       }`}
     >
-      {/* Background overlay that stretches but doesn't go beyond the height of the navbar */}
       <div
         className={`absolute top-0 left-0 w-full transition-all duration-300 bg-white 
         h-14 ${isOpen ? "h-screen" : ""}`}
@@ -91,10 +76,6 @@ const Navbar = () => {
         style={{ zIndex: 10 }}
       >
         <Link href="#" className="flex items-center" prefetch={false}>
-          {/* <IconLogoSide
-            size="custom"
-            className="md:h-11 sm:h-10 h-9 hover:text-[#0289b9]"
-          /> */}
           <ReactLogo
             className="md:h-11 sm:h-10 h-9"
             color={isHovered ? "#0289b9" : "#302A63"}
