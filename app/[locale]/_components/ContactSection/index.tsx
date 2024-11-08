@@ -53,7 +53,7 @@ export default function ContactSection() {
     <>
       {/* Desktop Version (Hidden on mobile) */}
       <section
-        id="contactSectionDesktop"
+        id="contactSection"
         className="md:flex md:flex-col w-full p-5 pb-0"
       >
         {/* Desktop */}
@@ -84,6 +84,7 @@ export default function ContactSection() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={backgroundImageVariants}
+          id="contactSection"
         >
           <Image
             src="/images/MainPoint_3.jpg"
