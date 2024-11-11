@@ -34,7 +34,7 @@ export default function VideoGallery() {
           video.play();
         } else {
           video.pause();
-          video.currentTime = 0; // Reset immediately
+          video.currentTime = 0;
         }
       }
     });
@@ -51,17 +51,21 @@ export default function VideoGallery() {
         >
           {index === currentVideoIndex && (
             <video
+              width="100%"
+              height="100%"
               ref={(el) => {
                 videoRefs.current[index] = el;
               }}
-              src={video.src}
               poster={video.thumbnail}
-              loop
               muted
               playsInline
-              autoPlay
-              className="w-full h-full inset-0 absolute object-cover rounded-3xl"
-            />
+              preload="auto"
+              controls={false}
+              className="w-full h-full inset-0 absolute object-cover flex items-center justify-center rounded-3xl"
+            >
+              <source src={video.src} type="video/mp4" />
+              Your browser does not support the html video tag.
+            </video>
           )}
         </div>
       ))}
