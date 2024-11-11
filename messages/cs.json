@@ -1,130 +1,130 @@
 {
-	"metadata": {
-		"title": "USPV - Fotovoltaické elektrárny",
-		"description": "USPV - Fotovoltaické elektrárny"
-	},
-	"navbar": {
-		"home": "Domů",
-		"aboutUs": "O nás",
-		"references": "Reference",
-		"contact": "Kontakt",
-		"switchToEnglish": "en",
-		"switchToCzech": "cz"
-	},
-	"hero": {
-		"title": "Zvolte zelenou cestu s obnovitelnou energií.",
-		"subtitle": "Jsme součástí revoluce v solární energii. 100% ekologické, 100% inovativní."
-	},
-	"numbersSection": {
-		"title": "V ČÍSLECH",
-		"subtitle": "Úspěchy naší podnikatelské skupiny",
-		"cards": {
-			"card1": {
-				"title": "na trhu",
-				"suffix": " let"
-			},
-			"card2": {
-				"title": "zaměstnanců",
-				"suffix": "+"
-			},
-			"card3": {
-				"title": "portfolio",
-				"suffix": "+ mil. €"
-			},
-			"card4": {
-				"title": "výkonu",
-				"suffix": "+ MWp"
-			},
-			"card5": {
-				"title": "obrat",
-				"suffix": "+ mil. €"
-			},
-			"card6": {
-				"title": "tun CO2 emisí ušetřeno",
-				"suffix": "+ mil."
-			}
-		}
-	},
-	"aboutUsSection": {
-		"title": "O NÁS",
-		"subtitle": "Pár slov o naší společnosti",
-		"companies": {
-			"USPV": {
-				"title": "USPV",
-				"description1": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě etablována na českém i zahraničním trhu, známá pod firmou Ekotechnik. Jejím vlastníkem je český podnikatel Tomáš Korostenský. ",
-				"description2": "Kromě fotovoltaických elektráren (FVE) Skupina USPV vlastní také portfolio přípojných bodů k FVE, ke kterým plánuje v blízké budoucnosti připojit další výrobny po celé EU. Skupina USPV se zaměřuje na lokality, kde výstavba FVE může v souladu s novou legislativou podpořit energetickou soběstačnost EU a nezávislost obcí, čímž umožní obcím větší kontrolu a flexibilitu v energetické politice."
-			},
-			"Ekotechnik": {
-				"subtitle": "STAVÍME NA ZÍSKANÝCH ZKUŠENOSTECH",
-				"title": "Ekotechnik Czech",
-				"description": "Společnost Ekotechnik Czech s.r.o. působí na českém trhu již od roku 1990 a specializuje se na návrh, výstavbu a provoz solárních elektráren. Nabízí komplexní služby od počátečního návrhu projektu, přes zajištění veškerých povolení, až po realizaci a servis fotovoltaických systémů. Díky dlouholetým zkušenostem dokáže navrhnout řešení na míru, která splňují specifické potřeby obcí a menších měst. Důraz klade na analýzu energetických potřeb, poskytování komplexních energetických služeb s maximálním užitkem ve formě úspor, rychlý servis a nadstandardní zákaznickou péči. Ekotechnik Czech s.r.o. zároveň nabízí ekologická řešení šetrná k životnímu prostředí."
-			},
-			"SolarKit": {
-				"subtitle": "VE SPOLUPRÁCI S",
-				"title": "Solar Kit",
-				"description": "Solar Kit Hungary je dynamická společnost se sídlem v Budapešti, specializující se na velkoobchodní distribuce fotovoltaických (PV) systémů. Založena v roce 2016, rychle expandovala nejen v Maďarsku, ale i do dalších evropských zemí. Nabízí komplexní solární řešení a distribuci PV produktů pro rezidenční, komerční i průmyslové účely. Díky partnerství se značkami jako Huawei, Deye a SolaX nabízí konkurenceschopné ceny a vysokou kvalitu. Společnost se pyšní technickou podporou, vzděláváním partnerů, rozsáhlým skladem a efektivní logistikou."
-			}
-		}
-	},
-	"referencesSection": {
-		"title": "NAŠE REFENCE",
-		"subtitle": "Projekty, na které jsme hrdí",
-		"projects": {
-			"project1": {
-				"country": "Česká Republika",
-				"note": "Development přípojných bodů"
-			},
-			"project2": {
-				"country": "Česká Republika",
-				"note": "Development, výstavba a investice"
-			},
-			"project3": {
-				"country": "Rumunsko",
-				"note": "Development, výstavba a investice"
-			},
-			"project4": {
-				"country": "Ukrajina",
-				"note": "Development, výstavba a investice"
-			},
-			"project5": {
-				"country": "Spojené Království",
-				"note": "Projekce a development"
-			},
-			"project6": {
-				"country": "Kazachstán",
-				"note": "Dodání návrhu a inženýring fotovoltaických elektráren"
-			},
-			"project7": {
-				"country": "Turecko",
-				"note": "Dodání návrhu a inženýring fotovoltaických elektráren"
-			},
-			"project8": {
-				"country": "Indie",
-				"note": "Výroba konstrukcí pro fotovoltaické elektrárny",
-				"developed": "Výrobní závod"
-			}
-		},
-		"cardContent": {
-			"card1": {
-				"title": "Budování portfolia v ČR",
-				"text": "Společnost se zaměřila na vývoj portfolia fotovoltaických elektráren v České republice. V současné chvíli provozujeme 7 MWp a vlastníme portofilo přípojných bodů, ke kterým plánujeme připojit další výrobní zařízení po celé ČR."
-			},
-			"card2": {
-				"title": "Budování portfolia v zahraničí",
-				"text": "V Rumunsku bylo vyvinuto 36 MWp. Dále byl dokončen projekt o výkonu 280 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
-			},
-			"card3": {
-				"title": "let osvědčených zkušeností",
-				"text": "S více než 1,15 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
-			},
-			"card4": {
-				"title": "Od návrhu po realizaci",
-				"text": "Naše společnost se specializuje nejen na vývoj fotovoltaických elektráren, ale také na dodání konstrukcí a zajištění samotné výstavby. Díky naším odborným znalostem a zkušenostem jsme schopni komplexně pokrýt všechny fáze realizace projektu."
-			}
-		}
-	},
-	"partnersSection": {
-		"title": "PARTNEŘI",
-		"subtitle": "Podporujeme pokrok, společně"
-	}
+  "metadata": {
+    "title": "USPV - Fotovoltaické elektrárny",
+    "description": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě etablována na českém i zahraničním trhu, známá pod firmou Ekotechnik. Jejím vlastníkem je český podnikatel Tomáš Korostenský."
+  },
+  "navbar": {
+    "home": "Domů",
+    "aboutUs": "O nás",
+    "references": "Reference",
+    "contact": "Kontakt",
+    "switchToEnglish": "en",
+    "switchToCzech": "cz"
+  },
+  "hero": {
+    "title": "Zvolte zelenou cestu s obnovitelnou energií.",
+    "subtitle": "Jsme součástí revoluce v solární energii. 100% ekologické, 100% inovativní."
+  },
+  "numbersSection": {
+    "title": "V ČÍSLECH",
+    "subtitle": "Úspěchy naší podnikatelské skupiny",
+    "cards": {
+      "card1": {
+        "title": "na trhu",
+        "suffix": " let"
+      },
+      "card2": {
+        "title": "zaměstnanců",
+        "suffix": "+"
+      },
+      "card3": {
+        "title": "portfolio",
+        "suffix": "+ mil. €"
+      },
+      "card4": {
+        "title": "výkonu",
+        "suffix": "+ MWp"
+      },
+      "card5": {
+        "title": "obrat",
+        "suffix": "+ mil. €"
+      },
+      "card6": {
+        "title": "tun CO2 emisí ušetřeno",
+        "suffix": "+ mil."
+      }
+    }
+  },
+  "aboutUsSection": {
+    "title": "O NÁS",
+    "subtitle": "Pár slov o naší společnosti",
+    "companies": {
+      "USPV": {
+        "title": "USPV",
+        "description1": "Skupina společností USPV, působící ve fotovoltaickém průmyslu a dalších oblastech obnovitelných zdrojů, je dlouhodobě etablována na českém i zahraničním trhu, známá pod firmou Ekotechnik. Jejím vlastníkem je český podnikatel Tomáš Korostenský. ",
+        "description2": "Kromě fotovoltaických elektráren (FVE) Skupina USPV vlastní také portfolio přípojných bodů k FVE, ke kterým plánuje v blízké budoucnosti připojit další výrobny po celé EU. Skupina USPV se zaměřuje na lokality, kde výstavba FVE může v souladu s novou legislativou podpořit energetickou soběstačnost EU a nezávislost obcí, čímž umožní obcím větší kontrolu a flexibilitu v energetické politice."
+      },
+      "Ekotechnik": {
+        "subtitle": "STAVÍME NA ZÍSKANÝCH ZKUŠENOSTECH",
+        "title": "Ekotechnik Czech",
+        "description": "Společnost Ekotechnik Czech s.r.o. působí na českém trhu již od roku 1990 a specializuje se na návrh, výstavbu a provoz solárních elektráren. Nabízí komplexní služby od počátečního návrhu projektu, přes zajištění veškerých povolení, až po realizaci a servis fotovoltaických systémů. Díky dlouholetým zkušenostem dokáže navrhnout řešení na míru, která splňují specifické potřeby obcí a menších měst. Důraz klade na analýzu energetických potřeb, poskytování komplexních energetických služeb s maximálním užitkem ve formě úspor, rychlý servis a nadstandardní zákaznickou péči. Ekotechnik Czech s.r.o. zároveň nabízí ekologická řešení šetrná k životnímu prostředí."
+      },
+      "SolarKit": {
+        "subtitle": "VE SPOLUPRÁCI S",
+        "title": "Solar Kit",
+        "description": "Solar Kit Hungary je dynamická společnost se sídlem v Budapešti, specializující se na velkoobchodní distribuce fotovoltaických (PV) systémů. Založena v roce 2016, rychle expandovala nejen v Maďarsku, ale i do dalších evropských zemí. Nabízí komplexní solární řešení a distribuci PV produktů pro rezidenční, komerční i průmyslové účely. Díky partnerství se značkami jako Huawei, Deye a SolaX nabízí konkurenceschopné ceny a vysokou kvalitu. Společnost se pyšní technickou podporou, vzděláváním partnerů, rozsáhlým skladem a efektivní logistikou."
+      }
+    }
+  },
+  "referencesSection": {
+    "title": "NAŠE REFENCE",
+    "subtitle": "Projekty, na které jsme hrdí",
+    "projects": {
+      "project1": {
+        "country": "Česká Republika",
+        "note": "Development přípojných bodů"
+      },
+      "project2": {
+        "country": "Česká Republika",
+        "note": "Development, výstavba a investice"
+      },
+      "project3": {
+        "country": "Rumunsko",
+        "note": "Development, výstavba a investice"
+      },
+      "project4": {
+        "country": "Ukrajina",
+        "note": "Development, výstavba a investice"
+      },
+      "project5": {
+        "country": "Spojené Království",
+        "note": "Projekce a development"
+      },
+      "project6": {
+        "country": "Kazachstán",
+        "note": "Dodání návrhu a inženýring fotovoltaických elektráren"
+      },
+      "project7": {
+        "country": "Turecko",
+        "note": "Dodání návrhu a inženýring fotovoltaických elektráren"
+      },
+      "project8": {
+        "country": "Indie",
+        "note": "Výroba konstrukcí pro fotovoltaické elektrárny",
+        "developed": "Výrobní závod"
+      }
+    },
+    "cardContent": {
+      "card1": {
+        "title": "Budování portfolia v ČR",
+        "text": "Společnost se zaměřila na vývoj portfolia fotovoltaických elektráren v České republice. V současné chvíli provozujeme 7 MWp a vlastníme portofilo přípojných bodů, ke kterým plánujeme připojit další výrobní zařízení po celé ČR."
+      },
+      "card2": {
+        "title": "Budování portfolia v zahraničí",
+        "text": "V Rumunsku bylo vyvinuto 36 MWp. Dále byl dokončen projekt o výkonu 280 MWp, který financovala Evropská banka pro obnovu a rozvoj (EBRD) na Ukrajině."
+      },
+      "card3": {
+        "title": "let osvědčených zkušeností",
+        "text": "S více než 1,15 GWp projektů fotovoltaických elektráren vyvinutých v několika zemích má společnost silnou pozici na globálním trhu s obnovitelnou energií."
+      },
+      "card4": {
+        "title": "Od návrhu po realizaci",
+        "text": "Naše společnost se specializuje nejen na vývoj fotovoltaických elektráren, ale také na dodání konstrukcí a zajištění samotné výstavby. Díky naším odborným znalostem a zkušenostem jsme schopni komplexně pokrýt všechny fáze realizace projektu."
+      }
+    }
+  },
+  "partnersSection": {
+    "title": "PARTNEŘI",
+    "subtitle": "Podporujeme pokrok, společně"
+  }
 }
