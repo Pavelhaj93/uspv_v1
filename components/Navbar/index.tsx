@@ -75,7 +75,11 @@ const Navbar = () => {
         className="relative mx-auto flex h-14 items-center justify-between px-4 lg:px-8"
         style={{ zIndex: 10 }}
       >
-        <Link href="#" className="flex items-center" prefetch={false}>
+        <Link
+          href="#heroSection"
+          className="flex items-center"
+          prefetch={false}
+        >
           <ReactLogo
             className="md:h-11 sm:h-10 h-9"
             color={isHovered ? "#0289b9" : "#302A63"}
