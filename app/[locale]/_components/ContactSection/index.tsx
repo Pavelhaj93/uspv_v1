@@ -35,8 +35,8 @@ export default function ContactSection() {
               <p className="font-light">Milevská 2095/5</p>
               <p className="font-light">140 00 Praha 4</p>
               <p className="font-light">Czech Republic</p>
-              <p className="font-light">IČO: 12345678</p>
-              <p className="font-light">DIČ: CZ12345678</p>
+              <p className="font-light">IČO: 17471915</p>
+              <p className="font-light">DIČ: CZ17471915</p>
             </div>
             <div className="text-primary flex flex-col">
               <p className="font-semibold mb-0.5">Tomáš Korostenský</p>
