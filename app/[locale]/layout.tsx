@@ -5,6 +5,7 @@ import { locales } from "@/i18n";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 
 // Import Segoe UI with multiple weights
 const segoeUI = localFont({
@@ -48,6 +49,7 @@ export default async function LocaleLayout({
           <Navbar />
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
